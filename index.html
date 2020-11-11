@@ -1,19 +1,26 @@
 <!DOCTYPE html>
-<html lang="fa-IR">
+<html lang="fa-IR" dir="rtl"> 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles/styles.css">
     <title>Document</title>
 </head>
 <body>
-    <nav>
-        <div id="logo-search-container">
-            
-        </div>
-        <ui id="links-container">
+    <nav class="navbar navbar-dark bg-info">
+        <a class="navbar-brand" href="#">
+            <img src="./files/blue_favicon/android-chrome-512x512.png" width="60" height="40" alt="" loading="lazy">
+        </a>
+        <form class="form-inline">
+            <input id="search" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          </form>
 
-        </ui>
-    </nav>
+        <div id="buttons-container">
+            <button id="home-button" type="button" class="btn btn-light">خانه</button>
+            <button id="data-button" type="button" class="btn btn-light">داده‌ها</button>
+            <button id="login-button" type="button" class="btn btn-light">ورود</button>
+        </div>
+    </nav>      
 </body>
 </html>

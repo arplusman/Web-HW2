@@ -1,5 +1,39 @@
 nav {
-  background-color: rebeccapurple;
+  height: 10vh;
+}
+nav a img {
+  height: 8vh;
+}
+
+#buttons-container {
+  position: fixed;
+  width: 90%;
+  right: 110px;
+  display: flex;
+  justify-content: flex-start;
+  height: 6vh;
+}
+#buttons-container > button {
+  width: 7%;
+}
+
+#data-button {
+  margin-right: 30px;
+}
+
+#login-button {
+  margin-right: auto;
+}
+
+.form-inline {
+  margin-bottom: auto;
+  margin-bottom: auto;
+  margin-left: 15%;
+  height: 100%;
+}
+
+#search {
+  height: 65%;
 }
 
 /*# sourceMappingURL=styles.css.map */
