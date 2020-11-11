@@ -10,24 +10,41 @@ nav {
 #buttons-container {
     position: fixed;
     width: 90%;
-    right: 110px;
+    right: 8%;
     display: flex;
     justify-content: flex-start;
     height: 6vh;
 
     & > button {
         width: 7%;
+        align-content: center;
+        @media screen and (max-width: 600px) {
+            width: 20%;
+            margin: inherit
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        right: 0;
+        width: 100%;
+        background-color: #17a2b8;
+        bottom: 0;
+        place-content: space-between;
     }
 }
 
 #data-button {
     margin-right: 30px;
+
+    @media screen and (max-width: 600px) {
+        order: -1;
+    }
 }
 
 #login-button {
-    // justify-self: end;
+    justify-self: end;
     margin-right: auto;
-    // align-self: end;
+    
 }
 
 .form-inline {
