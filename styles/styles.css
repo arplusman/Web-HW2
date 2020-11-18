@@ -6,18 +6,97 @@
 
 main {
   display: inline-block;
-  background-color: green;
   height: 90vh;
   margin-right: 0;
   width: 100%;
   justify-self: stretch;
   align-self: stretch;
+  display: flex;
+  overflow: scroll;
+  flex-wrap: wrap;
 }
 
 body {
+  font-family: Sahel;
   unicode-bidi: bidi-override !important;
   direction: unset !important;
   text-align: right;
+}
+
+.card {
+  width: 25%;
+  height: 40%;
+  background-color: rebeccapurple;
+  margin: 3% 3%;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.score-section {
+  display: flex;
+  width: 43%;
+  height: 25%;
+  align-content: center;
+  justify-content: center;
+}
+
+.score {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  background-color: #72eb21;
+  width: 70%;
+  height: 100%;
+  font-size: 4rem;
+  color: white;
+  padding: 30px auto;
+  text-align: center;
+  border-radius: 15px;
+}
+
+.team-rank {
+  display: flex;
+  width: 50%;
+  height: 25%;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #c8eb03;
+  border-radius: 20px;
+}
+
+.rank {
+  padding-right: 10px;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.rank-number {
+  font-size: 2rem;
+  padding-left: 10px;
+}
+
+.datum {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: yellowgreen;
+  height: 20%;
+  border-radius: 20px;
+}
+
+.key {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.value {
+  margin-left: 3px;
 }
 
 nav {
