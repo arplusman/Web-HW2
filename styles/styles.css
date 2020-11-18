@@ -200,5 +200,10 @@ aside {
   height: 100%;
   margin-left: 0;
 }
+@media screen and (max-width: 600px) {
+  aside {
+    display: none;
+  }
+}
 
 /*# sourceMappingURL=styles.css.map */

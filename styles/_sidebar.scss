@@ -4,4 +4,8 @@ aside {
     background-color: royalblue;
     height: 100%;
     margin-left: 0;
+
+    @media screen and (max-width: 600px) {
+        display: none;
+    }
 }
