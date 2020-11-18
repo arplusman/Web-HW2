@@ -35,6 +35,16 @@ body {
   justify-content: center;
   align-items: center;
 }
+@media screen and (max-width: 1000px) {
+  .card {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .card {
+    width: 100%;
+  }
+}
 
 .score-section {
   display: flex;
@@ -74,6 +84,11 @@ body {
   font-size: 3rem;
   font-weight: bold;
 }
+@media screen and (max-width: 1000px) {
+  .rank {
+    font-size: 2rem;
+  }
+}
 
 .rank-number {
   font-size: 2rem;
@@ -91,12 +106,31 @@ body {
 }
 
 .key {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: bold;
+  text-align: center;
+  padding-right: 7px;
+}
+@media screen and (max-width: 1000px) {
+  .key {
+    font-size: 1.2rem;
+  }
 }
 
 .value {
   margin-left: 3px;
+  text-align: center;
+}
+@media screen and (max-width: 1000px) {
+  .value {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .key-uni {
+    font-size: 0.8rem;
+  }
 }
 
 nav {
