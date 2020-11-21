@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html lang="fa-IR" dir="rtl"> 
+<html lang="fa-IR" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://cdn.fontcdn.ir/Font/Persian/Sahel/Sahel.css' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles/styles.css">
     <title>Document</title>
 </head>
+
 <body>
     <nav class="navbar navbar-dark bg-info">
         <a class="navbar-brand" href="#">
@@ -15,7 +18,7 @@
         </a>
         <form class="form-inline">
             <input id="search" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          </form>
+        </form>
 
         <div id="buttons-container">
             <button id="home-button" type="button" class="btn btn-light">خانه</button>
@@ -23,11 +26,41 @@
             <button id="login-button" type="button" class="btn btn-light">ورود</button>
         </div>
     </nav>
-    
-    <div id="main-aside-container">
-        <aside>
 
-        </aside>
+    <div id="main-aside-container">
+        <div id="sidebar">
+            <div class='sidebar-section'>
+                <div class="sidebar-title">
+                    اعضای تیم
+                </div>
+                <ul>
+                    <li class="sidebar-item">
+                        آرمان محمدی
+                    </li>
+                    <li class="sidebar-item">
+                        ساعی سعادت
+                    </li>
+                    <li class="sidebar-item">
+                        سید علیرضا هاشمی
+                    </li>
+                </ul>
+            </div>
+            <div class='sidebar-section'>
+                <div class="sidebar-title">
+                    تنظیمات
+                </div>
+                <div class="sidebar-row" style="justify-content:space-between; ">
+                    <div class="sidebar-item">
+                        حالت شب
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+
 
         <main>
             <div class="card">
@@ -266,12 +299,10 @@
                     </div>
                 </div>
             </div>
-            
 
 
-            
-            
         </main>
     </div>
 </body>
+
 </html>
