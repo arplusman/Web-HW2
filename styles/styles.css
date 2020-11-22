@@ -199,10 +199,17 @@ nav a img {
   flex-wrap: wrap;
 }
 
+.night-mode {
+  background-color: #051f35 !important;
+  color: white !important;
+}
+
 #sidebar {
+  transition: 0.4s;
   display: inline-block;
+  background-color: #adc1ff;
+  color: #07091d;
   width: 300px;
-  background-color: royalblue;
   height: 100%;
   padding: 20px 30px 20px 30px;
 }
@@ -212,13 +219,11 @@ nav a img {
   }
 }
 #sidebar .sidebar-title {
-  color: aliceblue;
   font-weight: bold;
   font-size: 1.5rem;
   margin-bottom: 10px;
 }
 #sidebar .sidebar-item {
-  color: aliceblue;
   font-size: 1rem;
 }
 

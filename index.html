@@ -54,9 +54,23 @@
                         حالت شب
                     </div>
                     <label class="switch">
-                        <input type="checkbox">
+                        <input onclick="f()" id="night-mode-switch" type="checkbox">
                         <span class="slider round"></span>
                     </label>
+                    <script>
+                        let night_mode = 'day';
+                        let r = document.getElementById("night-mode-switch");
+                        function f() {
+                            if (night_mode === 'day') {
+                                night_mode = 'night';
+                                console.log(document.getElementById("sidebar"))
+                                document.getElementById("sidebar").classList.add("night-mode");
+                            } else {
+                                night_mode = 'day';
+                                document.getElementById("sidebar").classList.remove("night-mode");
+                            }
+                        }
+                    </script>
                 </div>
             </div>
         </div>

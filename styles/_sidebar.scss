@@ -4,10 +4,17 @@
     flex-wrap: wrap;
 }
 
+.night-mode {
+    background-color: #051f35 !important;
+    color: white !important;
+}
+
 #sidebar {
+    transition: .4s;
     display: inline-block;
+    background-color: rgb(173, 193, 255);
+    color: rgb(7, 9, 29);
     width: 300px;
-    background-color: royalblue;
     height: 100%;
     padding: 20px 30px 20px 30px;
 
@@ -16,14 +23,12 @@
     }
 
     .sidebar-title {
-        color: aliceblue;
         font-weight: bold;
         font-size: 1.5rem;
         margin-bottom: 10px;
     }
 
     .sidebar-item {
-        color: aliceblue;
         font-size: 1rem;
     }
 }
