@@ -134,34 +134,25 @@ body {
 }
 
 nav {
-  background-color: rebeccapurple;
+  height: 10vh;
+  background-color: magenta;
 }
 nav a img {
-  height: 55px;
-}
-
-.navbar-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-right: 120px;
-  margin-left: 20px;
+  height: 8vh;
 }
 
 .nav-item {
-  margin-left: 10px;
-  padding-bottom: 25px;
-}
-
-.nav-item:hover {
-  background-color: rebeccapurple;
+  text-decoration: none;
+  color: magenta;
 }
 
 #buttons-container {
-  display: inline-block;
+  position: fixed;
+  width: 90%;
+  right: 8%;
   display: flex;
   justify-content: flex-start;
-  align-content: center;
+  height: 6vh;
 }
 #buttons-container > button {
   width: 7%;
@@ -197,6 +188,17 @@ nav a img {
   margin-right: auto;
 }
 
+.form-inline {
+  margin-bottom: auto;
+  margin-bottom: auto;
+  margin-left: 15%;
+  height: 100%;
+}
+
+#search {
+  height: 65%;
+}
+
 aside {
   display: inline-block;
   width: 300px;
@@ -210,4 +212,4 @@ aside {
   }
 }
 
-/*# sourceMappingURL=styles.css.map */
+/*# sourceMappingURL=main.css.map */
