@@ -1,3 +1,6 @@
+html {
+    font-size: 80%;
+}
 #main-aside-container {
     width: 100%;
     height: 90vh;
@@ -6,6 +9,7 @@
 
 main {
     display: inline-block;
+    display: none;
     height: 90vh;
     margin-right: 0;
     width: 100%;
@@ -14,6 +18,7 @@ main {
     display: flex;
     overflow: scroll;
     flex-wrap: wrap;
+
 }
 
 body {
@@ -21,78 +26,113 @@ body {
     unicode-bidi: bidi-override !important;
     direction: unset !important;
     text-align:right;
-}
-
-.card {
-    width: 25%;
-    height: 40%;
-    background-color: rebeccapurple;
-    margin: 3% 3%;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    
-    @media screen and (max-width: 1000px) {
-        width: 40%;
-    }
-
-    @media screen and (max-width: 600px) {
-        width: 100%;
-    }
 
 }
 
-.score-section {
-    display: flex;
-    width: 43%;
-    height: 25%;
-    align-content: center;
-    justify-content: center;
-}
 
-.score {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-direction: column;
-    background-color: rgb(114, 235, 33);
-    width: 70%;
+.cards {
+    width: 100%;
     height: 100%;
-    font-size: 4rem;
-    color: white;
-    padding: 30px auto;
-    text-align: center;
-    border-radius: 15px;
-}
-
-.team-rank {
+    margin: 0;
     display: flex;
-    width: 50%;
-    height: 25%;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgb(200, 235, 3);
-    border-radius: 20px;
-}
+    flex-wrap: wrap;
 
-.rank {
-    padding-right: 10px;
-    font-size: 3rem;
-    font-weight: bold;
+    .card {
+        width: 24%;
+        height: 40%;
+        background-color: rebeccapurple;
+        margin: 2% 5px;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        // flex: 1 0 21%;
+        
+        @media screen and (max-width: 1000px) {
+            width: 32%;
+        }
 
-    @media screen and (max-width: 1000px) {
-        font-size: 2rem;
+        @media screen and (max-width: 600px) {
+            width: 96%;
+        }
+
+        .team-rank {
+            
+            display: flex;
+            width: 50%;
+            height: 25%;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgb(200, 235, 3);
+            border-radius: 20px;
+            .rank {
+                padding-right: 10px;
+                font-size: 3rem;
+                font-weight: bold;
+            
+                @media screen and (max-width: 1000px) {
+                    font-size: 2rem;
+                }
+            }
+            .rank-number {
+                font-size: 2rem;
+                padding-left: 10px;
+            }
+        }
+
+
+        .score-section {
+
+            background-color: rgb(226, 168, 8);
+            display: flex;
+            width: 43%;
+            height: 25%;
+            align-content: center;
+            justify-content: center;
+            margin: 0 5px;
+            padding: 0;
+
+            @media screen and (max-width: 600px) {
+                width: 100%;
+            }
+            .key {
+                display: none;
+                @media screen and (max-width: 600px) {
+                    display: block;
+                }
+            }
+            .score {
+                display: flex;
+                justify-content: center;
+                align-content: center;
+                flex-direction: column;
+                width: 100%;
+                height: 100%;
+                font-size: 4rem;
+                color: white;
+                padding: 30px auto;
+                text-align: center;
+                border-radius: 15px;
+            
+                @media screen and (max-width: 600px) {
+                    background-color: inherit;
+                    width: 10%;
+                    font-size: 2.1rem;
+                    color: inherit;
+                }
+            }
+        }
+
+
+
     }
 }
 
 
-.rank-number {
-    font-size: 2rem;
-    padding-left: 10px;
-}
+
+
 
 .datum {
     width: 90%;
