@@ -1,6 +1,7 @@
 html {
     font-size: 80%;
 }
+
 #main-aside-container {
     width: 100%;
     height: 90vh;
@@ -25,8 +26,9 @@ body {
     font-family: Sahel;
     unicode-bidi: bidi-override !important;
     direction: unset !important;
-    text-align:right;
-
+    text-align: right;
+    opacity: 0 !important;
+    transition: opacity .5s;
 }
 
 
@@ -50,7 +52,7 @@ body {
         justify-content: center;
         align-items: center;
         // flex: 1 0 21%;
-        
+
         @media screen and (max-width: 1000px) {
             width: 30%;
         }
@@ -71,7 +73,7 @@ body {
 
 
         .team-rank {
-            
+
             display: flex;
             width: 50%;
             height: 25%;
@@ -80,7 +82,7 @@ body {
             background-color: rgb(200, 235, 3);
             border-radius: 20px;
 
-            @media screen and (max-width: 600px){
+            @media screen and (max-width: 600px) {
                 width: 90%;
                 display: flex;
                 justify-content: space-between;
@@ -94,11 +96,12 @@ body {
                 padding-right: 10px;
                 font-size: 3rem;
                 font-weight: bold;
-            
+
                 @media screen and (max-width: 1000px) {
                     font-size: 2rem;
                 }
             }
+
             .rank-number {
                 font-size: 2rem;
                 padding-left: 10px;
@@ -126,12 +129,15 @@ body {
                 height: 20%;
                 border-radius: 20px;
             }
+
             .key {
                 display: none;
+
                 @media screen and (max-width: 600px) {
                     display: block;
                 }
             }
+
             .score {
                 display: flex;
                 justify-content: center;
@@ -144,7 +150,7 @@ body {
                 padding: 30px auto;
                 text-align: center;
                 border-radius: 15px;
-            
+
                 @media screen and (max-width: 600px) {
                     background-color: inherit;
                     width: 10%;

@@ -26,6 +26,8 @@ body {
   unicode-bidi: bidi-override !important;
   direction: unset !important;
   text-align: right;
+  opacity: 0;
+  transition: opacity 0.5s;
 }
 
 .cards {
