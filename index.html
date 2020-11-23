@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles/styles.css">
-    
-    <title>Document</title>
+
+    <title>خانه</title>
     <link rel="icon" href="./files/black_favicon/favicon.ico">
     <link rel="icon" sizes="16x16" href="./files/black_favicon/favicon-16x16.png">
     <link rel="icon" sizes="32x32" href="./files/black_favicon/favicon-32x32.png">
@@ -27,17 +27,26 @@
         </div>
 
         <div id="buttons-container">
-            <button id="home-button" type="button" class="btn btn-light">خانه</button>
-            <button id="data-button" type="button" class="btn btn-light">داده‌ها</button>
-            <button id="login-button" type="button" class="btn btn-light">ورود</button>
-            <button id="register-button" type="button" class="btn btn-light">ثبت نام</button>
+            <button onclick="location.href='index.html'" id="home-button" type="button" class="btn btn-light"
+                style="border-bottom: 3px solid;">
+                خانه
+            </button>
+            <button onclick="location.href='data.html'" id="data-button" type="button" class="btn btn-light">
+                داده‌ها
+            </button>
+            <button onclick="location.href='login.html'" id="login-button" type="button" class="btn btn-light">
+                ورود
+            </button>
+            <button onclick="location.href='register.html'" id="register-button" type="button" class="btn btn-light">
+                ثبت نام
+            </button>
         </div>
+
     </nav>
 
     <div id="main-aside-container">
         <div id="sidebar">
             <div class='sidebar-section'>
-                <!-- <input type="button" onclick="location.href='./login.html';" value="Go to Google" /> -->
                 <div class="sidebar-title">
                     اعضای تیم
                 </div>
@@ -67,11 +76,9 @@
                     </label>
                     <script>
                         let night_mode = 'day';
-                        let r = document.getElementById("night-mode-switch");
                         function f() {
                             if (night_mode === 'day') {
                                 night_mode = 'night';
-                                console.log(document.getElementById("sidebar"))
                                 document.getElementById("sidebar").classList.add("night-mode");
                             } else {
                                 night_mode = 'day';
