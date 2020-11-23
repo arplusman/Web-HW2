@@ -1,8 +1,8 @@
-nav {
-    height: 10vh;
+.navbar {
+    height: 13vh;
+    background-color: rgba(97, 197, 243, 0.993);
     a img {
         height: 8vh;
-    //     width: 10%;
     }
 }
 
@@ -14,38 +14,74 @@ nav {
     display: flex;
     justify-content: flex-start;
     height: 6vh;
-
-    & > button {
-        width: 7%;
-        align-content: center;
-        @media screen and (max-width: 600px) {
-            width: 20%;
-            margin: inherit
-        }
-    }
-
+    
     @media screen and (max-width: 600px) {
         right: 0;
         width: 100%;
         background-color: #17a2b8;
         bottom: 0;
         place-content: space-between;
+        z-index: 1;
+        height: 8vh;
     }
-}
 
-#data-button {
-    margin-right: 30px;
-
-    @media screen and (max-width: 600px) {
-        order: -1;
+    & > button {
+        width: 6%;
+        margin: 0 20px;
+        height: 100%;
+        align-self: center;
+        background-color: inherit;
+        border: none;
+        font-size: 1.3rem;
+        @media screen and (max-width: 600px) {
+            width: 25%;
+            margin: inherit
+        }
     }
-}
 
-#login-button {
-    justify-self: end;
-    margin-right: auto;
+    #home-button {
+        margin-right: 130px;
+        border-bottom: 3px solid;
+        @media screen and (max-width: 600px) {
+            margin-right: inherit;
+        }
+    }
     
+    #data-button {
+        @media screen and (max-width: 600px) {
+        }
+    }
+
+    #login-button {
+        justify-self: flex-end;
+        margin-right: auto;
+        width: 12%;
+        border: 1px solid rgba(12, 106, 150, 0.993);
+        border-radius: 0;
+        @media screen and (max-width: 600px) {
+            margin-right: inherit;
+            border: 0;
+            width: 25%;
+        }
+    }
+
+    #register-button {
+        width: 15%;
+        color: white;
+        background-color: rgba(12, 106, 150, 0.993);
+        border-radius: 0;
+        @media screen and (max-width: 600px) {
+            width: 25%;
+            border: 0;
+            background-color: inherit;
+            color: inherit;
+        }
+    }
+
+
 }
+
+
 
 .form-inline {
     margin-bottom: auto;
@@ -56,4 +92,8 @@ nav {
 
 #search {
     height: 65%;
+}
+
+#logo-container {
+    margin:0px 0px;
 }
