@@ -34,9 +34,10 @@ body {
   margin: 0;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 .cards .card {
-  width: 24%;
+  width: 22%;
   height: 40%;
   background-color: rebeccapurple;
   margin: 2% 5px;
@@ -49,13 +50,22 @@ body {
 }
 @media screen and (max-width: 1000px) {
   .cards .card {
-    width: 32%;
+    width: 30%;
   }
 }
 @media screen and (max-width: 600px) {
   .cards .card {
     width: 96%;
   }
+}
+.cards .card .datum {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: yellowgreen;
+  height: 20%;
+  border-radius: 20px;
 }
 .cards .card .team-rank {
   display: flex;
@@ -65,6 +75,17 @@ body {
   align-items: center;
   background-color: #c8eb03;
   border-radius: 20px;
+}
+@media screen and (max-width: 600px) {
+  .cards .card .team-rank {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: yellowgreen;
+    height: 20%;
+    border-radius: 20px;
+  }
 }
 .cards .card .team-rank .rank {
   padding-right: 10px;
@@ -92,7 +113,13 @@ body {
 }
 @media screen and (max-width: 600px) {
   .cards .card .score-section {
-    width: 100%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: yellowgreen;
+    height: 20%;
+    border-radius: 20px;
   }
 }
 .cards .card .score-section .key {
@@ -123,16 +150,6 @@ body {
     font-size: 2.1rem;
     color: inherit;
   }
-}
-
-.datum {
-  width: 90%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: yellowgreen;
-  height: 20%;
-  border-radius: 20px;
 }
 
 .key {
@@ -172,7 +189,7 @@ body {
 }
 
 #buttons-container {
-  position: fixed;
+  position: absolute;
   width: 90%;
   right: 8%;
   display: flex;
@@ -181,6 +198,7 @@ body {
 }
 @media screen and (max-width: 600px) {
   #buttons-container {
+    position: fixed;
     right: 0;
     width: 100%;
     background-color: #17a2b8;

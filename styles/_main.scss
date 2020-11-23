@@ -36,9 +36,10 @@ body {
     margin: 0;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 
     .card {
-        width: 24%;
+        width: 22%;
         height: 40%;
         background-color: rebeccapurple;
         margin: 2% 5px;
@@ -51,12 +52,23 @@ body {
         // flex: 1 0 21%;
         
         @media screen and (max-width: 1000px) {
-            width: 32%;
+            width: 30%;
         }
 
         @media screen and (max-width: 600px) {
             width: 96%;
         }
+
+        .datum {
+            width: 90%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: yellowgreen;
+            height: 20%;
+            border-radius: 20px;
+        }
+
 
         .team-rank {
             
@@ -67,6 +79,17 @@ body {
             align-items: center;
             background-color: rgb(200, 235, 3);
             border-radius: 20px;
+
+            @media screen and (max-width: 600px){
+                width: 90%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color: yellowgreen;
+                height: 20%;
+                border-radius: 20px;
+            }
+
             .rank {
                 padding-right: 10px;
                 font-size: 3rem;
@@ -95,7 +118,13 @@ body {
             padding: 0;
 
             @media screen and (max-width: 600px) {
-                width: 100%;
+                width: 90%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color: yellowgreen;
+                height: 20%;
+                border-radius: 20px;
             }
             .key {
                 display: none;
@@ -125,23 +154,7 @@ body {
             }
         }
 
-
-
     }
-}
-
-
-
-
-
-.datum {
-    width: 90%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: yellowgreen;
-    height: 20%;
-    border-radius: 20px;
 }
 
 .key {

@@ -8,7 +8,7 @@
 
 
 #buttons-container {
-    position: fixed;
+    position: absolute;
     width: 90%;
     right: 8%;
     display: flex;
@@ -16,6 +16,7 @@
     height: 6vh;
     
     @media screen and (max-width: 600px) {
+        position: fixed;
         right: 0;
         width: 100%;
         background-color: #17a2b8;
