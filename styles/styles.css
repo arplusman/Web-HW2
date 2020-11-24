@@ -26,6 +26,8 @@ body {
   unicode-bidi: bidi-override !important;
   direction: unset !important;
   text-align: right;
+  opacity: 0 !important;
+  transition: opacity 0.5s;
 }
 
 .cards {
@@ -231,7 +233,6 @@ body {
 }
 #buttons-container #home-button {
   margin-right: 130px;
-  border-bottom: 3px solid;
 }
 @media screen and (max-width: 600px) {
   #buttons-container #home-button {

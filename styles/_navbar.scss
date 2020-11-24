@@ -15,7 +15,7 @@
     display: inline-flex;
     justify-content: flex-start;
     height: 6vh;
-    
+
     @media screen and (max-width: 600px) {
         position: fixed;
         right: 0;
@@ -27,7 +27,7 @@
         height: 8vh;
     }
 
-    & > button {
+    &>button {
         width: 6%;
         margin: 0 20px;
         height: 100%;
@@ -35,6 +35,7 @@
         background-color: inherit;
         border: none;
         font-size: 1.3rem;
+
         @media screen and (max-width: 600px) {
             width: 25%;
             margin: inherit;
@@ -49,15 +50,14 @@
 
     #home-button {
         margin-right: 130px;
-        border-bottom: 3px solid;
+
         @media screen and (max-width: 600px) {
             margin-right: inherit;
         }
     }
-    
+
     #data-button {
-        @media screen and (max-width: 600px) {
-        }
+        @media screen and (max-width: 600px) {}
     }
 
     #login-button {
@@ -66,6 +66,7 @@
         width: 12%;
         border: 1px solid rgba(12, 106, 150, 0.993);
         border-radius: 0;
+
         @media screen and (max-width: 600px) {
             margin-right: inherit;
             border: 0;
@@ -80,6 +81,7 @@
         border: 0;
         background-color: rgba(12, 106, 150, 0.993);
         border-radius: 0;
+
         @media screen and (max-width: 600px) {
             width: 25%;
             border: 0;
@@ -98,7 +100,7 @@
 }
 
 #logo-container {
-    margin:0px 0px;
+    margin: 0px 0px;
 }
 #logo-text {
     font-family: 'Lastwaerk bold', sans-serif;

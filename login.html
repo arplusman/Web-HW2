@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fa-IR" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://cdn.fontcdn.ir/Font/Persian/Sahel/Sahel.css' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="./styles/styles.css">
+
+  <title>ورود</title>
+  <link rel="icon" href="./files/black_favicon/favicon.ico">
+  <link rel="icon" sizes="16x16" href="./files/black_favicon/favicon-16x16.png">
+  <link rel="icon" sizes="32x32" href="./files/black_favicon/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="192x192" href="./files/black_favicon/apple-touch-icon.png">
+  <link rel="icon" sizes="192x192" href="./files/black_favicon/android-chrome-192x192.png">
+  <link rel="icon" sizes="512x512" href="./files/black_favicon/android-chrome-512x512.png">
+</head>
+
+<body>
+  <nav class="navbar">
+    <div id="logo-container">
+      <a class="navbar-brand" href="#">
+        <img src="./files/blue_favicon/android-chrome-512x512.png" alt="" loading="lazy">
+      </a>
+    </div>
+
+    <div id="buttons-container">
+      <button onclick="transitionToPage('index.html')" id="home-button" type="button" class="btn btn-light">
+        خانه
+      </button>
+      <button onclick="transitionToPage('data.html')" id="data-button" type="button" class="btn btn-light">
+        داده‌ها
+      </button>
+      <button id="login-button" type="button" class="btn btn-light" style="border-bottom: 3px solid;">
+        ورود
+      </button>
+      <button onclick="transitionToPage('register.html')" id="register-button" type="button" class="btn btn-light">
+        ثبت نام
+      </button>
+    </div>
+
+    <script>
+      transitionToPage = function (href) {
+        document.querySelector('body').style.opacity = 0
+        setTimeout(function () {
+          window.location.href = href
+        }, 500)
+      }
+
+      document.addEventListener('DOMContentLoaded', function (event) {
+        setTimeout(function () {
+          document.querySelector('body').style.opacity = 1
+        }, 0)
+      })
+    </script>
+
+  </nav>
+
+  <div id="main-aside-container">
+    <div id="sidebar">
+      <div class='sidebar-section'>
+        <div class="sidebar-title">
+          اعضای تیم
+        </div>
+        <ul>
+          <li class="sidebar-item">
+            آرمان محمدی
+          </li>
+          <li class="sidebar-item">
+            ساعی سعادت
+          </li>
+          <li class="sidebar-item">
+            سید علیرضا هاشمی
+          </li>
+        </ul>
+      </div>
+      <div class='sidebar-section'>
+        <div class="sidebar-title">
+          تنظیمات
+        </div>
+        <div class="sidebar-row" style="justify-content:space-between; ">
+          <div class="sidebar-item">
+            حالت شب
+          </div>
+          <label class="switch">
+            <input onclick="f()" id="night-mode-switch" type="checkbox">
+            <span class="slider round"></span>
+          </label>
+          <script>
+            let night_mode = 'day';
+            function f() {
+              if (night_mode === 'day') {
+                night_mode = 'night';
+                document.getElementById("sidebar").classList.add("night-mode");
+              } else {
+                night_mode = 'day';
+                document.getElementById("sidebar").classList.remove("night-mode");
+              }
+            }
+          </script>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
