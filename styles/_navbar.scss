@@ -1,17 +1,18 @@
 .navbar {
-    height: 13vh;
+    height: 10vh;
     background-color: rgba(97, 197, 243, 0.993);
+
     a img {
         height: 8vh;
     }
+    box-shadow: 0 10px 10px grey;
 }
-
 
 #buttons-container {
     position: absolute;
     width: 90%;
-    right: 8%;
-    display: flex;
+    right: 10%;
+    display: inline-flex;
     justify-content: flex-start;
     height: 6vh;
     
@@ -36,8 +37,14 @@
         font-size: 1.3rem;
         @media screen and (max-width: 600px) {
             width: 25%;
-            margin: inherit
+            margin: inherit;
+            border-radius: 0px;
         }
+    }
+
+    & > button:hover {
+        border-radius: 0;
+        border-bottom: 3px solid rgba($color: #101077, $alpha: 0.5);
     }
 
     #home-button {
@@ -67,8 +74,10 @@
     }
 
     #register-button {
-        width: 15%;
+        width: 12%;
+        margin-right: 5px;
         color: white;
+        border: 0;
         background-color: rgba(12, 106, 150, 0.993);
         border-radius: 0;
         @media screen and (max-width: 600px) {
@@ -80,21 +89,19 @@
     }
 
 
-}
+    #login-button:hover, #register-button:hover  {
+        @media screen and (max-width: 600px) {
+            border-bottom: 3px solid rgba($color: #101077, $alpha: 0.5);
+        }
+    }
 
-
-
-.form-inline {
-    margin-bottom: auto;
-    margin-bottom: auto;
-    margin-left: 15%;
-    height: 100%;
-}
-
-#search {
-    height: 65%;
 }
 
 #logo-container {
     margin:0px 0px;
+}
+#logo-text {
+    font-family: 'Lastwaerk bold', sans-serif;
+    color: white;
+    display: inline;
 }

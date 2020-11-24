@@ -17,7 +17,7 @@ main {
   justify-self: stretch;
   align-self: stretch;
   display: flex;
-  overflow: scroll;
+  overflow-y: scroll;
   flex-wrap: wrap;
 }
 
@@ -181,8 +181,9 @@ body {
 }
 
 .navbar {
-  height: 13vh;
+  height: 10vh;
   background-color: rgba(97, 197, 243, 0.993);
+  box-shadow: 0 10px 10px grey;
 }
 .navbar a img {
   height: 8vh;
@@ -191,8 +192,8 @@ body {
 #buttons-container {
   position: absolute;
   width: 90%;
-  right: 8%;
-  display: flex;
+  right: 10%;
+  display: inline-flex;
   justify-content: flex-start;
   height: 6vh;
 }
@@ -221,7 +222,12 @@ body {
   #buttons-container > button {
     width: 25%;
     margin: inherit;
+    border-radius: 0px;
   }
+}
+#buttons-container > button:hover {
+  border-radius: 0;
+  border-bottom: 3px solid rgba(16, 16, 119, 0.5);
 }
 #buttons-container #home-button {
   margin-right: 130px;
@@ -247,8 +253,10 @@ body {
   }
 }
 #buttons-container #register-button {
-  width: 15%;
+  width: 12%;
+  margin-right: 5px;
   color: white;
+  border: 0;
   background-color: rgba(12, 106, 150, 0.993);
   border-radius: 0;
 }
@@ -260,20 +268,20 @@ body {
     color: inherit;
   }
 }
-
-.form-inline {
-  margin-bottom: auto;
-  margin-bottom: auto;
-  margin-left: 15%;
-  height: 100%;
-}
-
-#search {
-  height: 65%;
+@media screen and (max-width: 600px) {
+  #buttons-container #login-button:hover, #buttons-container #register-button:hover {
+    border-bottom: 3px solid rgba(16, 16, 119, 0.5);
+  }
 }
 
 #logo-container {
   margin: 0px 0px;
+}
+
+#logo-text {
+  font-family: "Lastwaerk bold", sans-serif;
+  color: white;
+  display: inline;
 }
 
 .sidebar-row {
@@ -370,6 +378,16 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+.go-back-link {
+  text-decoration: none;
+  color: white;
+}
+
+.go-back-link:hover {
+  text-decoration: none;
+  color: rebeccapurple;
 }
 
 /*# sourceMappingURL=styles.css.map */

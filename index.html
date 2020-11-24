@@ -5,17 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://cdn.fontcdn.ir/Font/Persian/Sahel/Sahel.css' rel='stylesheet' type='text/css'>
+    <link href="http://fonts.cdnfonts.com/css/lastwaerk-black" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles/styles.css">
     <title>Document</title>
+
 </head>
 
 <body>
+
     <nav class="navbar">
         <div id="logo-container">
             <a class="navbar-brand" href="#">
                 <img src="./files/blue_favicon/android-chrome-512x512.png" alt="" loading="lazy">
+                <!-- <p id="logo-text">Fail Pardazan</p> -->
             </a>
         </div>
 
@@ -596,22 +600,19 @@
                     </div>
     
                 </div>
-
-
-
-
-
-            
-
-
-
-
-
-
     
             </div>
     
-
+            <script type="text/javascript">
+                let signInButton = document.getElementById('login-button');
+                signInButton.addEventListener("click", () => {
+                    window.location.href = "./signin.html?tab=signin"
+                })
+                let signUpButton = document.getElementById('register-button');
+                signUpButton.addEventListener("click", () => {
+                    window.location.href = "./signin.html?tab=signup"
+                })
+            </script>
 
 
         </main>

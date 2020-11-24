@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fa-IR" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://cdn.fontcdn.ir/Font/Persian/Sahel/Sahel.css' rel='stylesheet' type='text/css'>
+    <link href="http://fonts.cdnfonts.com/css/lastwaerk-black" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <title>Account</title>
+
+    <script type="text/javascript">
+    
+        function changeTab(tabIndex){ 
+
+        }
+
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const requestedTab = urlParams.get('tab');
+
+        console.log(requestedTab);
+
+        if (requestedTab == "signup") {
+            changeTab(1)
+        }
+    
+    </script>
+
+</head>
+
+<body>
+    
+        <nav class="navbar minimal-navbar">
+            <div id="logo-container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="./files/blue_favicon/android-chrome-512x512.png" alt="" loading="lazy">
+                    <p id="logo-text">Fail Pardazan</p>
+                </a>
+                
+            </div>
+
+            <a href="index.html" class="go-back-link">بازگشت به خانه ></a>
+
+
+        </nav>
+
+    
+
+        <main>
+    
+            <div id="main-container" class="alert alert-warning">
+                <div id="button-container">
+                    <button type="button" class="btn btn-light" onclick="post()">POST</button>
+                    <button type="button" class="btn btn-dark" onclick="get()">GET</button>
+                </div>
+                <form id="post-form" action="post">
+                    <div id='x'>
+                        <label for="input-a">A:</label>
+                        <input id="number_A" type="number" name="input-a" placeholder="value of A" autofocus>
+                    </div>
+                    <div id='x'>
+                        <label for="input-a">B:</label>
+                        <input id="number_B" type="number" name="input-a" placeholder="value of B">
+                    </div>
+                    <div id="submits-container">
+                        <button id="post_node_btn" class="btn btn-success submit-btn">Node.JS</button>
+                        <button id="post_go_btn" class="btn btn-info submit-btn">GO</button>
+                    </div>
+                </form>
+                <form id="get-form" action="get">
+                    <label id="light-label" for="input-line">Select Line:</label>
+                    <input id="input-line" name="input-line" type="number" min="0" max="100">
+                    <div id="submits-container">
+                        <button id="get_node_btn" class="btn btn-success submit-btn">Node.JS</button>
+                        <button id="get_go_btn" class="btn btn-info submit-btn">GO</button>
+                    </div>
+                </form>
+                <div id="result" class="result">
+                </div>
+            </div>
+
+
+        </main>
+    </div>
+</body>
+
+</html>
