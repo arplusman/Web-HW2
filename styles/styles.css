@@ -26,10 +26,17 @@ body {
   unicode-bidi: bidi-override !important;
   direction: unset !important;
   text-align: right;
-  opacity: 0 !important;
-  transition: opacity 0.5s;
+  animation: load 5s;
 }
 
+@keyframes load {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .cards {
   width: 100%;
   height: 100%;
