@@ -8,7 +8,15 @@ html {
   display: flex;
 }
 
-main {
+#body {
+  font-family: Sahel;
+  unicode-bidi: bidi-override !important;
+  direction: unset !important;
+  text-align: right;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+#body #main {
   display: inline-block;
   display: none;
   height: 90vh;
@@ -20,14 +28,8 @@ main {
   overflow-y: scroll;
   flex-wrap: wrap;
 }
-
-body {
-  font-family: Sahel;
-  unicode-bidi: bidi-override !important;
-  direction: unset !important;
-  text-align: right;
-  opacity: 0;
-  transition: opacity 0.5s;
+#body #main.night-mode {
+  background-color: #616161 !important;
 }
 
 .cards {
@@ -41,7 +43,7 @@ body {
 .cards .card {
   width: 22%;
   height: 40%;
-  background-color: rebeccapurple;
+  background-color: #577493;
   margin: 2% 5px;
   border-radius: 20px;
   display: flex;
@@ -60,12 +62,24 @@ body {
     width: 96%;
   }
 }
+.cards .card > * {
+  transition: background-color 1s, color 1.2s;
+}
+.cards .card.night-mode .datum {
+  background-color: #3B8EE7;
+}
+.cards .card.night-mode .team-rank {
+  background-color: #D7496A;
+}
+.cards .card.night-mode .score-section {
+  background-color: #C8A33E;
+}
 .cards .card .datum {
   width: 90%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: yellowgreen;
+  background-color: #E3E1A9;
   height: 20%;
   border-radius: 20px;
 }
@@ -75,7 +89,7 @@ body {
   height: 25%;
   justify-content: space-between;
   align-items: center;
-  background-color: #c8eb03;
+  background-color: #D1634E;
   border-radius: 20px;
 }
 @media screen and (max-width: 600px) {
@@ -100,11 +114,12 @@ body {
   }
 }
 .cards .card .team-rank .rank-number {
-  font-size: 2rem;
+  color: yellow;
+  font-size: 3rem;
   padding-left: 10px;
 }
 .cards .card .score-section {
-  background-color: #e2a808;
+  background-color: #6AA349;
   display: flex;
   width: 43%;
   height: 25%;
@@ -154,7 +169,7 @@ body {
   }
 }
 .cards .card:hover {
-  transition: 0.5s;
+  transition: all 0.5s;
   box-shadow: 5px 5px 30px gray;
 }
 
@@ -345,6 +360,7 @@ body {
   height: 100%;
   z-index: 1;
   padding: 20px 30px 20px 30px;
+  transition: all 1.1s linear;
 }
 @media screen and (min-width: 600px) {
   #sidebar {
@@ -355,7 +371,7 @@ body {
 @media screen and (max-width: 600px) {
   #sidebar {
     position: fixed;
-    left: -1000px;
+    left: -200px;
     width: 200px;
   }
 }

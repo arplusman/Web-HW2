@@ -8,27 +8,31 @@ html {
     display: flex;
 }
 
-main {
-    display: inline-block;
-    display: none;
-    height: 90vh;
-    margin-right: 0;
-    width: 100%;
-    justify-self: stretch;
-    align-self: stretch;
-    display: flex;
-    overflow-y: scroll;
-    flex-wrap: wrap;
 
-}
-
-body {
+#body {
     font-family: Sahel;
     unicode-bidi: bidi-override !important;
     direction: unset !important;
     text-align: right;
     opacity: 0;
     transition: opacity .5s;
+        #main {
+            display: inline-block;
+            display: none;
+            height: 90vh;
+            margin-right: 0;
+            width: 100%;
+            justify-self: stretch;
+            align-self: stretch;
+            display: flex;
+            overflow-y: scroll;
+            flex-wrap: wrap;
+        
+            &.night-mode {
+                background-color: rgb(97, 97, 97)!important;
+            }   
+        
+        }
 }
 
 
@@ -43,7 +47,7 @@ body {
     .card {
         width: 22%;
         height: 40%;
-        background-color: rebeccapurple;
+        background-color: #577493;
         margin: 2% 5px;
         border-radius: 20px;
         display: flex;
@@ -61,16 +65,38 @@ body {
             width: 96%;
         }
 
+        & > * {
+            transition: background-color 1s, color 1.2s;
+        }
+
+        &.night-mode {
+            
+            .datum {
+                background-color: #3B8EE7;
+            }
+
+            .team-rank {
+                background-color: #D7496A;
+            }
+
+            .score-section {
+                background-color: #C8A33E;
+            }
+        }
+
         .datum {
             width: 90%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: yellowgreen;
+            background-color: #E3E1A9;
             height: 20%;
             border-radius: 20px;
-        }
 
+            // transition: background-color 1.2s;
+            // transition: color 1.4s;
+        }
+        
 
         .team-rank {
 
@@ -79,7 +105,7 @@ body {
             height: 25%;
             justify-content: space-between;
             align-items: center;
-            background-color: rgb(200, 235, 3);
+            background-color: #D1634E;
             border-radius: 20px;
 
             @media screen and (max-width: 600px) {
@@ -103,7 +129,8 @@ body {
             }
 
             .rank-number {
-                font-size: 2rem;
+                color: yellow;
+                font-size: 3rem;
                 padding-left: 10px;
             }
         }
@@ -111,7 +138,7 @@ body {
 
         .score-section {
 
-            background-color: rgb(226, 168, 8);
+            background-color: #6AA349;
             display: flex;
             width: 43%;
             height: 25%;
@@ -163,7 +190,7 @@ body {
     }
 
     .card:hover {
-        transition: 0.5s;
+        transition: all 0.5s;
         box-shadow: 5px 5px 30px gray;
     }
 }
