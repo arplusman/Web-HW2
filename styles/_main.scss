@@ -27,21 +27,9 @@ body {
     unicode-bidi: bidi-override !important;
     direction: unset !important;
     text-align: right;
-    animation: load 5s;
+    opacity: 0;
+    transition: opacity .5s;
 }
-
-@keyframes load {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-// #body {
-//     opacity: 1!important;
-// }
 
 
 .cards {

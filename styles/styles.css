@@ -26,17 +26,10 @@ body {
   unicode-bidi: bidi-override !important;
   direction: unset !important;
   text-align: right;
-  animation: load 5s;
+  opacity: 0;
+  transition: opacity 0.5s;
 }
 
-@keyframes load {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 .cards {
   width: 100%;
   height: 100%;
@@ -192,7 +185,46 @@ body {
 .navbar {
   height: 10vh;
   background-color: rgba(97, 197, 243, 0.993);
-  box-shadow: 0 10px 10px grey;
+  box-shadow: 0 10px 10px gray;
+  z-index: 5;
+}
+.navbar #logo-container {
+  margin: auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.navbar #sidebar-open-btn {
+  font-size: 20px;
+  cursor: pointer;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+@media screen and (min-width: 600px) {
+  .navbar #sidebar-open-btn {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 600px) {
+  .navbar #sidebar-open-btn {
+    display: inline;
+  }
+}
+.navbar #sidebar-close-btn {
+  font-size: 36px;
+  cursor: pointer;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+@media screen and (min-width: 600px) {
+  .navbar #sidebar-close-btn {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 600px) {
+  .navbar #sidebar-close-btn {
+    display: none;
+  }
 }
 .navbar a img {
   height: 8vh;
@@ -214,7 +246,7 @@ body {
     background-color: #17a2b8;
     bottom: 0;
     place-content: space-between;
-    z-index: 1;
+    z-index: 5;
     height: 8vh;
   }
 }
@@ -277,13 +309,10 @@ body {
   }
 }
 @media screen and (max-width: 600px) {
-  #buttons-container #login-button:hover, #buttons-container #register-button:hover {
+  #buttons-container #login-button:hover,
+#buttons-container #register-button:hover {
     border-bottom: 3px solid rgba(16, 16, 119, 0.5);
   }
-}
-
-#logo-container {
-  margin: 0px 0px;
 }
 
 #logo-text {
@@ -304,17 +333,25 @@ body {
 }
 
 #sidebar {
-  transition: 0.4s;
-  display: inline-block;
+  transition: background-color 0.4s;
   background-color: #adc1ff;
+  box-shadow: 0px 0px 3px 0px #051f35;
   color: #07091d;
-  width: 300px;
   height: 100%;
+  z-index: 1;
   padding: 20px 30px 20px 30px;
 }
-@media screen and (max-width: 1000px) {
+@media screen and (min-width: 600px) {
   #sidebar {
-    display: none;
+    display: inline-block;
+    width: 300px;
+  }
+}
+@media screen and (max-width: 600px) {
+  #sidebar {
+    position: fixed;
+    left: -1000px;
+    width: 200px;
   }
 }
 #sidebar .sidebar-title {

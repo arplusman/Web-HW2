@@ -1,11 +1,49 @@
 .navbar {
     height: 10vh;
     background-color: rgba(97, 197, 243, 0.993);
+    box-shadow: 0 10px 10px gray;
+    z-index: 5;
+
+    #logo-container {
+        margin: auto;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #sidebar-open-btn {
+        font-size: 20px;
+        cursor: pointer;
+        margin-top: auto;
+        margin-bottom: auto;
+
+        @media screen and (min-width:600px) {
+            display: none !important;
+        }
+
+        @media screen and (max-width:600px) {
+            display: inline;
+        }
+    }
+
+    #sidebar-close-btn {
+        font-size: 36px;
+        cursor: pointer;
+        margin-top: auto;
+        margin-bottom: auto;
+
+        @media screen and (min-width:600px) {
+            display: none !important;
+        }
+
+        @media screen and (max-width:600px) {
+            display: none;
+        }
+    }
 
     a img {
         height: 8vh;
     }
-    box-shadow: 0 10px 10px grey;
 }
 
 #buttons-container {
@@ -23,7 +61,7 @@
         background-color: #17a2b8;
         bottom: 0;
         place-content: space-between;
-        z-index: 1;
+        z-index: 5;
         height: 8vh;
     }
 
@@ -43,7 +81,7 @@
         }
     }
 
-    & > button:hover {
+    &>button:hover {
         border-radius: 0;
         border-bottom: 3px solid rgba($color: #101077, $alpha: 0.5);
     }
@@ -91,17 +129,14 @@
     }
 
 
-    #login-button:hover, #register-button:hover  {
+    #login-button:hover,
+    #register-button:hover {
         @media screen and (max-width: 600px) {
             border-bottom: 3px solid rgba($color: #101077, $alpha: 0.5);
         }
     }
-
 }
 
-#logo-container {
-    margin: 0px 0px;
-}
 #logo-text {
     font-family: 'Lastwaerk bold', sans-serif;
     color: white;

@@ -19,14 +19,61 @@
     <link rel="icon" sizes="512x512" href="./files/black_favicon/android-chrome-512x512.png">
 </head>
 
+<script>
+    let night_mode = 'day';
+    let sidebar_status = 'close';
+
+    window.transitionToPage = function (href) {
+        document.querySelector('body').style.opacity = 0
+        setTimeout(function () {
+            window.location.href = href
+        }, 500)
+    }
+
+    document.addEventListener('DOMContentLoaded', function (event) {
+        setTimeout(function () {
+            document.querySelector('body').style.opacity = 1
+        }, 0)
+    })
+
+    function change_light_mode() {
+        if (night_mode === 'day') {
+            night_mode = 'night';
+            document.getElementById("sidebar").classList.add("night-mode");
+        } else {
+            night_mode = 'day';
+            document.getElementById("sidebar").classList.remove("night-mode");
+        }
+    }
+
+    function change_sidebar_status() {
+        if (sidebar_status === 'close') {
+            sidebar_status = 'open';
+            document.getElementById("sidebar").style.left = '0px';
+            document.getElementById("sidebar-close-btn").style.display = 'inline';
+            document.getElementById("sidebar-open-btn").style.display = 'none';
+
+        } else {
+            sidebar_status = 'close';
+            document.getElementById("sidebar").style.left = '-1000px';
+            document.getElementById("sidebar-close-btn").style.display = 'none';
+            document.getElementById("sidebar-open-btn").style.display = 'inline';
+        }
+    }
+
+</script>
+
 <body id="body">
 
-    <nav class="navbar">
+    <nav class="navbar" class="row">
         <div id="logo-container">
-            <a class="navbar-brand" href="#">
+            <a href="#">
                 <img src="./files/blue_favicon/android-chrome-512x512.png" alt="" loading="lazy">
                 <!-- <p id="logo-text">Fail Pardazan</p> -->
             </a>
+            <a id='sidebar-open-btn' onclick="change_sidebar_status()">&#9776;</a>
+            <a id='sidebar-close-btn' onclick="change_sidebar_status()">&times;</a>
+
         </div>
 
         <div id="buttons-container">
@@ -36,7 +83,8 @@
             <button onclick="transitionToPage('data.html')" id="data-button" type="button" class="btn btn-light">
                 داده‌ها
             </button>
-            <button onclick="transitionToPage('signin.html?tab=signin')" id="login-button" type="button" class="btn btn-light">
+            <button onclick="transitionToPage('signin.html?tab=signin')" id="login-button" type="button"
+                class="btn btn-light">
                 ورود
             </button>
             <button onclick="transitionToPage('signin.html?tab=signup')" id="register-button" type="button"
@@ -44,22 +92,6 @@
                 ثبت نام
             </button>
         </div>
-
-        <script>
-            window.transitionToPage = function (href) {
-                document.querySelector('body').style.opacity = 0
-                setTimeout(function () {
-                    window.location.href = href
-                }, 500)
-            }
-
-            document.addEventListener('DOMContentLoaded', function (event) {
-                setTimeout(function () {
-                    document.querySelector('body').style.opacity = 1
-                }, 0)
-            })
-        </script>
-
     </nav>
 
     <div id="main-aside-container">
@@ -89,21 +121,9 @@
                         حالت شب
                     </div>
                     <label class="switch">
-                        <input onclick="f()" id="night-mode-switch" type="checkbox">
+                        <input onclick="change_light_mode()" id="night-mode-switch" type="checkbox">
                         <span class="slider round"></span>
                     </label>
-                    <script>
-                        let night_mode = 'day';
-                        function f() {
-                            if (night_mode === 'day') {
-                                night_mode = 'night';
-                                document.getElementById("sidebar").classList.add("night-mode");
-                            } else {
-                                night_mode = 'day';
-                                document.getElementById("sidebar").classList.remove("night-mode");
-                            }
-                        }
-                    </script>
                 </div>
             </div>
         </div>
@@ -629,9 +649,9 @@
                     </div>
 
                 </div>
-    
+
             </div>
-    
+
             <!-- <script type="text/javascript">
                 let signInButton = document.getElementById('login-button');
                 signInButton.addEventListener("click", () => {
