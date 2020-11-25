@@ -510,23 +510,37 @@ input:checked + .slider:before {
   flex-direction: column;
   justify-content: center;
   align-content: center;
+  align-items: center;
 }
 .signin-body #main-form {
-  background-color: #448dce;
-  width: 60%;
+  background-color: #4e92ce;
+  max-width: 1000px;
+  min-width: 500px;
   height: 50vh;
-  margin-right: auto;
-  margin-left: auto;
+  margin-right: 50px;
+  margin-left: 50px;
   display: flex;
   flex-direction: row;
-  align-content: space-between;
   direction: rtl;
 }
+.signin-body #main-form #sign-form-picture {
+  height: 100%;
+  width: auto;
+  background-color: black;
+  overflow: hidden;
+  object-fit: contain;
+}
 .signin-body #main-form #sign-form-picture img {
-  height: 50vh;
+  object-fit: fit;
+  background-color: red;
+}
+@media screen and (max-width: 600px) {
+  .signin-body #main-form #sign-form-picture {
+    display: none;
+  }
 }
 .signin-body #main-form #sign-form {
-  width: 100%;
+  width: 800px;
   display: inline;
 }
 .signin-body #main-form #sign-form .form-button-container {
@@ -535,6 +549,7 @@ input:checked + .slider:before {
 }
 .signin-body #main-form #sign-form .form-button-container .form-head-button {
   background-color: #0c375a;
+  font-size: 20px;
   width: 50%;
   height: 100%;
   display: inline;
@@ -545,6 +560,7 @@ input:checked + .slider:before {
 }
 .signin-body #main-form #sign-form .form-button-container .form-head-button.selected-form-button {
   background-color: transparent;
+  color: white;
 }
 
 /*# sourceMappingURL=styles.css.map */

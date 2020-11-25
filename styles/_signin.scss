@@ -23,28 +23,39 @@
         flex-direction: column;
         justify-content: center;
         align-content: center;
+        align-items: center;
     }
 
     #main-form {
-        background-color: rgb(68, 141, 206);
-        width: 60%;
+        background-color: rgb(78, 146, 206);
+        // width: 60%;
+        max-width: 1000px;
+        min-width: 500px;
         height: 50vh;
-        margin-right: auto;
-        margin-left: auto;
+        margin-right: 50px;
+        margin-left: 50px;
         display: flex;
         flex-direction: row;
-        align-content: space-between;
         direction: rtl;
 
 
         #sign-form-picture {
+            height: 100%;
+            width: auto;
+            background-color: black;
+            overflow: hidden;
+            object-fit: contain;
             img {
-                height: 50vh;
+                object-fit: fit;
+                background-color: red;
+            }
+            @media screen and (max-width:600px) {
+                display: none;
             }
         }
 
         #sign-form {
-            width: 100%;
+            width: 800px;
             display: inline;
 
             .form-button-container {
@@ -52,6 +63,7 @@
                 height: 5vh;
                 .form-head-button {
                     background-color: rgb(12, 55, 90);
+                    font-size: 20px;
                     width: 50%;
                     height: 100%;
                     display: inline;
@@ -62,6 +74,7 @@
 
                     &.selected-form-button {
                         background-color: transparent;
+                        color: white;
                     }
                 }
             }
