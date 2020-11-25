@@ -53,9 +53,9 @@
     display: inline-flex;
     justify-content: flex-start;
     height: 6vh;
-    box-shadow: 0 -3px 10px gray;
 
     @media screen and (max-width: 600px) {
+        box-shadow: 0 -3px 10px gray;
         position: fixed;
         right: 0;
         width: 100%;
