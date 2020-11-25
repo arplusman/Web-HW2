@@ -11,24 +11,6 @@
     <link rel="stylesheet" href="./styles/styles.css">
     <title>Account</title>
 
-    <script type="text/javascript">
-    
-        function changeTab(tabIndex){ 
-
-        }
-
-
-        const urlParams = new URLSearchParams(window.location.search);
-        const requestedTab = urlParams.get('tab');
-
-        console.log(requestedTab);
-
-        if (requestedTab == "signup") {
-            changeTab(1)
-        }
-    
-    </script>
-
 </head>
 
 <body class="signin-body">
@@ -41,50 +23,56 @@
                 </a>
                 
             </div>
-
             <a href="index.html" class="go-back-link">بازگشت به خانه ></a>
-
-
         </nav>
 
     
 
         <main>
-    
-            <div id="main-container" class="alert alert-warning">
-                <div id="button-container">
-                    <button type="button" class="btn btn-light" onclick="post()">POST</button>
-                    <button type="button" class="btn btn-dark" onclick="get()">GET</button>
-                </div>
-                <form id="post-form" action="post">
-                    <div id='x'>
-                        <label for="input-a">A:</label>
-                        <input id="number_A" type="number" name="input-a" placeholder="value of A" autofocus>
-                    </div>
-                    <div id='x'>
-                        <label for="input-a">B:</label>
-                        <input id="number_B" type="number" name="input-a" placeholder="value of B">
-                    </div>
-                    <div id="submits-container">
-                        <button id="post_node_btn" class="btn btn-success submit-btn">Node.JS</button>
-                        <button id="post_go_btn" class="btn btn-info submit-btn">GO</button>
-                    </div>
-                </form>
-                <form id="get-form" action="get">
-                    <label id="light-label" for="input-line">Select Line:</label>
-                    <input id="input-line" name="input-line" type="number" min="0" max="100">
-                    <div id="submits-container">
-                        <button id="get_node_btn" class="btn btn-success submit-btn">Node.JS</button>
-                        <button id="get_go_btn" class="btn btn-info submit-btn">GO</button>
-                    </div>
-                </form>
-                <div id="result" class="result">
-                </div>
-            </div>
 
+            <div id="main-form">
+                
+                <div id="sign-form">
+
+                    <div class="form-button-container">
+                        <button type="button" class = "form-head-button" id="signup-head-button"
+                        onClick="change_form_to_signup()">
+                            ثبت نام
+                        </button><button type="button" class = "form-head-button" id="signin-head-button" 
+                        onClick="change_form_to_signin()">
+                            ورود
+                        </button>
+                    </div>
+
+
+
+                </div>
+
+                <div id="sign-form-picture">
+                    <img src="files/signup-highQ-dark.jpg" alt="OoOoF">
+                </div>
+
+            </div>
 
         </main>
     </div>
+
+    <script src="scripts.js"></script>
+    <script type="text/javascript">
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const requestedTab = urlParams.get('tab');
+
+        console.log(requestedTab);
+
+        if (requestedTab == "signup") {
+            change_form_to_signup()
+        } else {
+            change_form_to_signin()
+        }
+    
+    </script>
+
 </body>
 
 </html>

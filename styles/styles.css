@@ -378,6 +378,10 @@ html {
   background-color: transparent;
   box-shadow: none;
 }
+.minimal-navbar #logo-container {
+  width: 40%;
+  margin-right: 0;
+}
 
 .sidebar-row {
   display: flex;
@@ -486,11 +490,61 @@ input:checked + .slider:before {
 .go-back-link {
   text-decoration: none;
   color: white;
+  margin-left: 10px;
+  font-family: Sahel;
 }
 
 .go-back-link:hover {
   text-decoration: none;
-  color: rebeccapurple;
+  color: #0b4a81;
+}
+
+.signin-body {
+  font-family: Sahel;
+  background-color: #adc1ff;
+  transition: background-color 0.5s, color 0.7s;
+}
+.signin-body main {
+  display: flex;
+  height: 85vh;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+.signin-body #main-form {
+  background-color: #448dce;
+  width: 60%;
+  height: 50vh;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+  direction: rtl;
+}
+.signin-body #main-form #sign-form-picture img {
+  height: 50vh;
+}
+.signin-body #main-form #sign-form {
+  width: 100%;
+  display: inline;
+}
+.signin-body #main-form #sign-form .form-button-container {
+  width: 100%;
+  height: 5vh;
+}
+.signin-body #main-form #sign-form .form-button-container .form-head-button {
+  background-color: #0c375a;
+  width: 50%;
+  height: 100%;
+  display: inline;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  outline: none;
+}
+.signin-body #main-form #sign-form .form-button-container .form-head-button.selected-form-button {
+  background-color: transparent;
 }
 
 /*# sourceMappingURL=styles.css.map */
