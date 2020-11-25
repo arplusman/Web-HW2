@@ -161,6 +161,11 @@ body {
         }
 
     }
+
+    .card:hover {
+        transition: 0.5s;
+        box-shadow: 5px 5px 30px gray;
+    }
 }
 
 .key {

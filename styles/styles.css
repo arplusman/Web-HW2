@@ -153,6 +153,10 @@ body {
     color: inherit;
   }
 }
+.cards .card:hover {
+  transition: 0.5s;
+  box-shadow: 5px 5px 30px gray;
+}
 
 .key {
   font-size: 1.3rem;
@@ -185,7 +189,7 @@ body {
 .navbar {
   height: 10vh;
   background-color: rgba(97, 197, 243, 0.993);
-  box-shadow: 0 10px 10px gray;
+  box-shadow: 0 3px 10px gray;
   z-index: 5;
 }
 .navbar #logo-container {
@@ -237,6 +241,7 @@ body {
   display: inline-flex;
   justify-content: flex-start;
   height: 6vh;
+  box-shadow: 0 -3px 10px gray;
 }
 @media screen and (max-width: 600px) {
   #buttons-container {
