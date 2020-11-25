@@ -119,6 +119,7 @@
         background-color: inherit;
         border: none;
         font-size: 1.3rem;
+        transition: all 2s;
 
         @media screen and (max-width: 600px) {
             width: 25%;
@@ -129,8 +130,12 @@
         
     }
 
-    &>button:hover {
+    &>button.active {
         border-bottom: 3px solid;
+    }
+
+    &>button:hover {
+        // tr: scale(1.2);
     }
 
     #home-button {

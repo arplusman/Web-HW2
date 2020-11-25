@@ -201,6 +201,32 @@ html {
   }
 }
 
+#data-container {
+  width: 80%;
+  margin: 80px auto;
+  height: auto;
+}
+
+table {
+  text-align: center;
+  width: 100%;
+}
+table th {
+  font-size: 3rem;
+  background-color: rgba(0, 119, 255, 0.836);
+  border: 1px solid white;
+}
+table td {
+  font-size: 2rem;
+  border: 1px solid #50b4ee;
+}
+table tr:nth-of-type(even) {
+  background-color: rgba(213, 243, 247, 0.966);
+}
+table tr:nth-of-type(odd) {
+  background-color: #6fb0bb;
+}
+
 .navbar {
   height: 10vh;
   background-color: rgba(97, 197, 243, 0.993);
@@ -312,6 +338,7 @@ html {
   background-color: inherit;
   border: none;
   font-size: 1.3rem;
+  transition: all 2s;
 }
 @media screen and (max-width: 600px) {
   #buttons-container > button {
@@ -320,7 +347,7 @@ html {
     border-radius: 0px;
   }
 }
-#buttons-container > button:hover {
+#buttons-container > button.active {
   border-bottom: 3px solid;
 }
 #buttons-container #home-button {

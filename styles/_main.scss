@@ -220,3 +220,34 @@ html {
         font-size: 0.8rem;
     }
 }
+
+#data-container {
+    width: 80%;
+    margin: 80px auto;
+    height: auto;
+}
+
+table {
+    th {
+        font-size: 3rem;
+        background-color: rgba(0, 119, 255, 0.836);
+        border: 1px solid white;
+    }
+
+    td {
+        font-size: 2rem;
+        border: 1px solid rgb(80, 180, 238); 
+    }
+
+    tr:nth-of-type(even) {
+        background-color: rgba(213, 243, 247, 0.966);
+    }
+
+    tr:nth-of-type(odd) {
+        background-color: rgb(111, 176, 187);
+    }
+
+
+    text-align: center;
+    width: 100%;
+}
