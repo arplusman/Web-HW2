@@ -206,6 +206,7 @@ html {
   background-color: rgba(97, 197, 243, 0.993);
   box-shadow: 0 3px 10px gray;
   z-index: 5;
+  transition: background-color 1s, color 1.2s;
 }
 .navbar #logo-container {
   margin: auto;
@@ -248,6 +249,34 @@ html {
 .navbar a img {
   height: 8vh;
 }
+.navbar.night-mode {
+  background-color: rgba(21, 87, 124, 0.993) !important;
+  box-shadow: 0 -3px 10px black;
+}
+.navbar.night-mode #buttons-container .navbar-link {
+  color: white;
+}
+.navbar.night-mode #buttons-container #login-button {
+  color: rgba(77, 207, 253, 0.993);
+  border-color: rgba(107, 207, 253, 0.993);
+}
+.navbar.night-mode #buttons-container #register-button {
+  background-color: rgba(1, 160, 218, 0.993);
+  color: black;
+}
+@media screen and (max-width: 600px) {
+  .navbar.night-mode #buttons-container button {
+    color: white !important;
+    background-color: transparent !important;
+    border-color: white !important;
+  }
+}
+.navbar.night-mode a {
+  color: white;
+}
+.navbar > * {
+  transition: background-color 1s, color 1.2s;
+}
 
 #buttons-container {
   position: absolute;
@@ -269,6 +298,11 @@ html {
     z-index: 5;
     height: 8vh;
   }
+  #buttons-container.night-mode {
+    color: white !important;
+    background-color: rgba(26, 102, 146, 0.993) !important;
+    box-shadow: 0 3px 10px black;
+  }
 }
 #buttons-container > button {
   width: 6%;
@@ -287,8 +321,7 @@ html {
   }
 }
 #buttons-container > button:hover {
-  border-radius: 0;
-  border-bottom: 3px solid rgba(16, 16, 119, 0.5);
+  border-bottom: 3px solid;
 }
 #buttons-container #home-button {
   margin-right: 130px;
@@ -341,15 +374,15 @@ html {
   display: inline;
 }
 
+.minimal-navbar {
+  background-color: transparent;
+  box-shadow: none;
+}
+
 .sidebar-row {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-}
-
-.night-mode {
-  background-color: #051f35 !important;
-  color: white !important;
 }
 
 #sidebar {
@@ -382,6 +415,10 @@ html {
 }
 #sidebar .sidebar-item {
   font-size: 1rem;
+}
+#sidebar.night-mode {
+  background-color: #051f35 !important;
+  color: white !important;
 }
 
 .switch {

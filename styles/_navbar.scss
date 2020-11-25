@@ -44,6 +44,46 @@
     a img {
         height: 8vh;
     }
+
+    &.night-mode {
+        background-color: rgba(21, 87, 124, 0.993) !important;
+        box-shadow: 0 -3px 10px black;
+
+        #buttons-container {
+
+            .navbar-link {
+                color: white;
+            }
+
+            #login-button {
+                color: rgba(77, 207, 253, 0.993);
+                border-color: rgba(107, 207, 253, 0.993);
+            }
+    
+            #register-button {
+                background-color: rgba(1, 160, 218, 0.993);
+                color: black;
+            }
+
+            @media screen and (max-width:600px) {
+                button{
+                    color: white !important;
+                    background-color: transparent !important;
+                    border-color: white !important;
+                }
+            }
+
+        }
+
+        a {
+            color: white
+        }
+
+    }
+    transition: background-color 1s, color 1.2s;
+    & > * {
+        transition: background-color 1s, color 1.2s;
+    }
 }
 
 #buttons-container {
@@ -64,6 +104,11 @@
         place-content: space-between;
         z-index: 5;
         height: 8vh;
+        &.night-mode {
+            color: white !important;
+            background-color: rgba(26, 102, 146, 0.993) !important;
+            box-shadow: 0 3px 10px black;
+        }
     }
 
     &>button {
@@ -80,11 +125,12 @@
             margin: inherit;
             border-radius: 0px;
         }
+
+        
     }
 
     &>button:hover {
-        border-radius: 0;
-        border-bottom: 3px solid rgba($color: #101077, $alpha: 0.5);
+        border-bottom: 3px solid;
     }
 
     #home-button {
@@ -142,4 +188,9 @@
     font-family: 'Lastwaerk bold', sans-serif;
     color: white;
     display: inline;
+}
+
+.minimal-navbar {
+    background-color: transparent;
+    box-shadow: none;
 }

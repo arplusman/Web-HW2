@@ -4,11 +4,6 @@
     flex-wrap: wrap;
 }
 
-.night-mode {
-    background-color: #051f35 !important;
-    color: white !important;
-}
-
 #sidebar {
     transition: background-color .4s;
     background-color: rgb(173, 193, 255);
@@ -39,6 +34,11 @@
 
     .sidebar-item {
         font-size: 1rem;
+    }
+
+    &.night-mode {
+        background-color: #051f35 !important;
+        color: white !important;
     }
 }
 

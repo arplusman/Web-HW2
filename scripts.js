@@ -19,6 +19,8 @@ function change_light_mode() {
         night_mode = 'night';
         document.getElementById("sidebar").classList.add("night-mode");
         document.getElementById('main').classList.add("night-mode");
+        document.getElementById("navbar").classList.add("night-mode");
+        document.getElementById("buttons-container").classList.add("night-mode");
         cards = document.getElementsByClassName('card')
         for (let i = 0; i < cards.length; i++) {
             cards[i].classList.add('night-mode')
@@ -27,6 +29,8 @@ function change_light_mode() {
         night_mode = 'day';
         document.getElementById("sidebar").classList.remove("night-mode");
         document.getElementById('main').classList.remove("night-mode");
+        document.getElementById("navbar").classList.remove("night-mode");
+        document.getElementById("buttons-container").classList.remove("night-mode");
         cards = document.getElementsByClassName('card')
         for (let i = 0; i < cards.length; i++) {
             cards[i].classList.remove('night-mode')
