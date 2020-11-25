@@ -502,7 +502,7 @@ input:checked + .slider:before {
 .signin-body {
   font-family: Sahel;
   background-color: #adc1ff;
-  transition: background-color 0.5s, color 0.7s;
+  transition: background-color 0.5s, color 0.7s, display 0.5s;
 }
 .signin-body main {
   display: flex;
@@ -561,6 +561,7 @@ input:checked + .slider:before {
 }
 .signin-body #main-form #sign-form .form-button-container .form-head-button {
   background-color: #0c375a;
+  color: white;
   font-size: 20px;
   width: 50%;
   height: 100%;
@@ -569,28 +570,99 @@ input:checked + .slider:before {
   border: 0;
   padding: 0;
   outline: none;
+  border-radius: 0 0 5px 5px;
 }
 .signin-body #main-form #sign-form .form-button-container .form-head-button.selected-form-button {
   background-color: transparent;
-  color: white;
+  color: #0c375a;
 }
 .signin-body #main-form #sign-form .form-container {
-  background-color: magenta;
   height: 90%;
 }
-.signin-body #main-form #sign-form .form-container .signin-form {
-  position: relative;
-  height: 100%;
-  background-color: red;
-}
-.signin-body #main-form #sign-form .form-container .signup-form {
+.signin-body #main-form #sign-form .form-container .signin-form-container {
   position: relative;
   height: 100%;
   display: none;
-  background-color: blue;
-  right: 0;
-  top: 0;
-  z-index: 2;
+}
+.signin-body #main-form #sign-form .form-container .signup-form-container {
+  position: relative;
+  height: 100%;
+  display: none;
+}
+.signin-body #main-form #sign-form .form-container .displayed-form {
+  display: block;
+}
+.signin-body #main-form #sign-form .form-container .signin-form {
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 10px 40px 10px;
+}
+.signin-body #main-form #sign-form .form-container .signin-form > h1 {
+  color: white;
+  display: flex;
+}
+.signin-body #main-form #sign-form .form-container .signin-form > * {
+  display: block;
+  width: 300px;
+  height: 50px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 15px;
+  border-radius: 5px;
+  outline: none;
+}
+.signin-body #main-form #sign-form .form-container .signin-form > *::placeholder {
+  color: rgba(255, 255, 255, 0.589);
+}
+.signin-body #main-form #sign-form .form-container .signin-form input:not([type=button]), .signin-body #main-form #sign-form .form-container .signin-form input:not([type=submit]) {
+  padding: 0 10px 0 10px;
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+}
+.signin-body #main-form #sign-form .form-container .signin-form input[type=button], .signin-body #main-form #sign-form .form-container .signin-form input[type=submit] {
+  background-color: #0c375a;
+  color: white;
+  font-size: 15px;
+  border: none;
+}
+.signin-body #main-form #sign-form .form-container .signin-form > .checkbox-container {
+  display: flex;
+  align-items: center;
+}
+.signin-body #main-form #sign-form .form-container .signin-form > .checkbox-container > input {
+  background-color: magenta;
+  margin-left: 10px;
+}
+.signin-body #main-form #sign-form .form-container .signin-form > .checkbox-container > label {
+  margin: 0;
+  color: white;
+}
+.signin-body #main-form #sign-form .form-container .signin-form .signin-form-error {
+  border: 2px solid rgba(255, 0, 0, 0.507);
+  font-size: 15px;
+  padding: 0 10px;
+  display: none;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+.signin-body #main-form #sign-form .form-container .signin-form .signin-form-error::-webkit-scrollbar {
+  display: none;
+  width: 0px;
+  background: transparent;
+}
+.signin-body #main-form #sign-form .form-container .signin-form .signin-form-error > img {
+  height: 100%;
+}
+.signin-body #main-form #sign-form .form-container .signin-form .signin-form-error > label {
+  padding-top: 5px;
 }
 
 /*# sourceMappingURL=styles.css.map */

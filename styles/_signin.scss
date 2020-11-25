@@ -15,7 +15,7 @@
 .signin-body {
     font-family: Sahel;
     background-color: rgb(173, 193, 255);
-    transition: background-color 0.5s, color 0.7s;;
+    transition: background-color 0.5s, color 0.7s, display 0.5s;
 
     main {
         display: flex;
@@ -75,6 +75,7 @@
                 min-width: 500px;
                 .form-head-button {
                     background-color: rgb(12, 55, 90);
+                    color: white;
                     font-size: 20px;
                     width: 50%;
                     height: 100%;
@@ -83,36 +84,121 @@
                     border: 0;
                     padding:0;
                     outline: none;
+                    border-radius: 0 0 5px 5px;
 
                     &.selected-form-button {
                         background-color: transparent;
-                        color: white;
+                        color: rgb(12, 55, 90);
                     }
                 }
             }
 
             .form-container {
-                background-color: magenta;
                 height: 90%;
-                .signin-form {
-                    position: relative;
-                    // display: none;
-                    // display: block;
-                    height: 100%;
-                    // position: absolute;
-                    background-color: red;
-                }
-
-                .signup-form {
+                .signin-form-container {
                     position: relative;
                     height: 100%;
                     display: none;
-                    // position: absolute;
-                    background-color:blue ;
-                    // position: absolute;
-                    right: 0;
-                    top: 0;
-                    z-index: 2;
+                }
+
+                .signup-form-container {
+                    position: relative;
+                    height: 100%;
+                    display: none;
+                }
+
+                .displayed-form {
+                    display: block;
+                }
+
+                .signin-form {
+                    height: 100%;
+                    width: 100%;
+                    align-items: center;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+
+                    padding:  0 10px 40px 10px;
+
+
+                    &>h1 {
+                        color: white;
+                        display: flex;
+                    }
+
+                    &>* {
+                        display: block;
+                        width: 300px;
+                        height: 50px;
+                        margin-right: auto;
+                        margin-left: auto;
+                        margin-top: 15px;
+                        border-radius: 5px;
+                        outline: none;
+                        &::placeholder {
+                            color: rgba(255, 255, 255, 0.589);
+                        }
+                    }
+
+                    input:not([type=button]), input:not([type=submit]) {
+                        padding: 0 10px 0 10px;
+                        background-color: transparent;
+                        border: 2px solid white;
+                        color: white;
+                           
+                    }
+
+                    input[type=button], input[type=submit] {
+                        background-color: rgb(12, 55, 90);
+                        color: white;
+                        font-size: 15px;
+                        border: none;
+                    }
+
+                    &>.checkbox-container {
+                        display: flex;
+                        align-items: center;
+                        
+                        &>input {
+                            // padding: 10px;
+                            background-color: magenta;
+                            margin-left: 10px;
+                            // colro: red;
+                        }
+
+                        &>label {
+                            margin: 0;
+                            color: white;
+                        }
+
+                    }
+
+                    .signin-form-error {
+                        border: 2px solid rgba(255, 0, 0, 0.507);
+                        font-size: 15px;
+                        padding: 0 10px ;
+                        // display: flex;
+                        display: none;
+                        align-content: center;
+                        justify-content: space-between;
+                        align-items: center;
+                        overflow: scroll;
+                        overflow-x: hidden;
+                        &::-webkit-scrollbar {
+                            display: none;
+                            width: 0px;
+                            background: transparent;
+                        }
+                        &> img {
+                            height: 100%;
+                        }
+
+                        &>label {
+                            padding-top: 5px;
+                        }
+                    }
+
                 }
             }
         }

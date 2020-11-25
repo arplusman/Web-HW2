@@ -53,15 +53,3 @@ function change_sidebar_status() {
     }
 }
 
-function change_form_to_signin() {
-    console.log('signin');
-    document.getElementById('signin-head-button').classList.add('selected-form-button');
-    document.getElementById('signup-head-button').classList.remove('selected-form-button');
-}
-
-function change_form_to_signup() {
-    console.log('signup');
-    document.getElementById('signup-head-button').classList.add('selected-form-button');
-    document.getElementById('signin-head-button').classList.remove('selected-form-button');
-}
-
