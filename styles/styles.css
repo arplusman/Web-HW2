@@ -250,6 +250,28 @@ table tr:nth-of-type(even) {
 table tr:nth-of-type(odd) {
   background-color: rgba(97, 197, 243, 0.775);
 }
+table.night-mode {
+  border: 5px solid #7195ff;
+}
+@media screen and (max-width: 600px) {
+  table.night-mode {
+    border: none;
+  }
+}
+table.night-mode th {
+  background-color: #6958ff;
+}
+table.night-mode tr:nth-of-type(even) {
+  background-color: #7195ff;
+}
+@media screen and (max-width: 600px) {
+  table.night-mode tr:nth-of-type(even) {
+    background-color: #adc1ff;
+  }
+}
+table.night-mode tr:nth-of-type(odd) {
+  background-color: #adc1ff;
+}
 
 .bottom-table-button-container {
   font-family: Sahel;
@@ -261,6 +283,12 @@ table tr:nth-of-type(odd) {
   justify-content: space-between;
   margin-top: 20px;
 }
+@media screen and (max-width: 600px) {
+  .bottom-table-button-container {
+    margin-top: 0px;
+    margin-bottom: 40px;
+  }
+}
 .bottom-table-button-container > button {
   border: 5px solid #adc1ff;
   border-radius: 5px;
@@ -270,6 +298,10 @@ table tr:nth-of-type(odd) {
   display: inline;
   width: 30%;
   min-width: 100px;
+}
+.bottom-table-button-container.night-mode > button {
+  border: 5px solid #7195ff;
+  color: #97b1ff;
 }
 
 .navbar {
@@ -286,7 +318,7 @@ table tr:nth-of-type(odd) {
   justify-content: space-between;
 }
 .navbar #sidebar-open-btn {
-  font-size: 20px;
+  font-size: 36px;
   cursor: pointer;
   margin-top: auto;
   margin-bottom: auto;

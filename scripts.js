@@ -33,7 +33,14 @@ function change_light_mode() {
         document.getElementById('main').classList.add("night-mode");
         document.getElementById("navbar").classList.add("night-mode");
         document.getElementById("buttons-container").classList.add("night-mode");
-        cards = document.getElementsByClassName('card')
+        
+        if (table = document.getElementById("data-container-table")) {
+            table.classList.add("night-mode");
+        }
+        if (div = document.getElementsByClassName("bottom-table-button-container")[0]) {
+            div.classList.add("night-mode");
+        }
+        cards = document.getElementsByClassName('card');
         for (let i = 0; i < cards.length; i++) {
             cards[i].classList.add('night-mode')
         }
@@ -43,7 +50,9 @@ function change_light_mode() {
         document.getElementById('main').classList.remove("night-mode");
         document.getElementById("navbar").classList.remove("night-mode");
         document.getElementById("buttons-container").classList.remove("night-mode");
-        cards = document.getElementsByClassName('card')
+        document.getElementById("data-container-table").classList.remove("night-mode");
+        document.getElementsByClassName("bottom-table-button-container")[0].classList.remove("night-mode");
+        cards = document.getElementsByClassName('card');
         for (let i = 0; i < cards.length; i++) {
             cards[i].classList.remove('night-mode')
         }

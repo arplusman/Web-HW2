@@ -303,9 +303,35 @@ table {
         background-color: rgba(97, 197, 243, 0.775)
     }
 
-
     text-align: center;
     width: 100%;
+
+    &.night-mode {
+        border: 5px solid rgb(113, 149, 255);
+
+        @media screen and (max-width: 600px) {
+            border: none;
+        }
+ 
+        th {
+            background-color: rgb(105, 88, 255);
+        }
+
+        tr:nth-of-type(even) {
+            background-color: rgb(113, 149, 255);
+           
+            @media screen and (max-width: 600px) {
+                background-color: rgb(173, 193, 255);
+            }
+        }
+    
+        tr:nth-of-type(odd) {
+            background-color: rgb(173, 193, 255);
+        }
+    
+    
+    }
+
 }
 
 .bottom-table-button-container {
@@ -317,6 +343,13 @@ table {
     width: 100%;
     justify-content: space-between;
     margin-top: 20px;
+
+    @media screen and (max-width: 600px) {
+        margin-top: 0px;
+        margin-bottom: 40px;
+    }
+
+    
     
     &>button {
         border: 5px solid rgb(173, 193, 255);
@@ -327,5 +360,10 @@ table {
         display: inline;
         width: 30%;
         min-width: 100px;
+    }
+
+    &.night-mode>button {
+        border: 5px solid rgb(113, 149, 255);
+        color:  rgb(151, 177, 255);
     }
 }

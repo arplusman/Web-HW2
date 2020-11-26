@@ -34,17 +34,18 @@
         </div>
 
         <div id="buttons-container">
-            <button onclick="transitionToPage('index.html')" id="home-button" type="button" class="btn btn-light">
-              خانه
+            <button onclick="transitionToPage(`index.html?theme=${night_mode}`)" id="home-button" type="button" class="btn btn-light">
+                خانه
             </button>
-            <button onclick="transitionToPage('data.html')" id="data-button" type="button" class="btn btn-light navbar-link active">
+            <button onclick="transitionToPage('data.html')" id="data-button" type="button"
+                class="btn btn-light navbar-link active">
                 داده‌ها
             </button>
-            <button onclick="transitionToPage('signin.html?tab=signin')" id="login-button" type="button"
+            <button onclick="transitionToPage(`signin.html?tab=signin&theme=${night_mode}`)" id="login-button" type="button"
                 class="btn btn-light">
                 ورود
             </button>
-            <button onclick="transitionToPage('signin.html?tab=signup')" id="register-button" type="button"
+            <button onclick="transitionToPage(`signin.html?tab=signup&theme=${night_mode}`)" id="register-button" type="button"
                 class="btn btn-light">
                 ثبت نام
             </button>
@@ -87,67 +88,80 @@
 
 
         <main id="main">
-          
-          <div id="data-container">
-            <table>
-              <tr>
-                <th>رتبه</th>
-                <th>نام تیم</th>
-                <th>نام دانشگاه و کشور</th>
-                <th>امتیاز</th>
-              </tr>
 
-              <tr>
-                <td><span>رتبه</span>۲۰</td>
-                <td><span>نام تیم</span>ممد</td>
-                <td><span>نام دانشگاه و کشور</span>شریف</td>
-                <td><span>امتیاز</span>۱۰۰</td>
-              </tr>
+            <div id="data-container">
+                <table id="data-container-table">
+                    <tr>
+                        <th>رتبه</th>
+                        <th>نام تیم</th>
+                        <th>نام دانشگاه و کشور</th>
+                        <th>امتیاز</th>
+                    </tr>
+
+                    <tr>
+                        <td><span class="span-title"><strong>رتبه</strong></span>۲۰</td>
+                        <td><span class="span-title"><strong>نام تیم</strong></span>ممد</td>
+                        <td><span class="span-title"><strong>نام دانشگاه و کشور</strong></span>شریف</td>
+                        <td><span class="span-title"><strong>امتیاز</strong></span>۱۰۰</td>
+                    </tr>
 
 
-              <tr>
-                <td><span>رتبه</span>۲۰</td>
-                <td><span>نام تیم</span>ممد</td>
-                <td><span>نام دانشگاه و کشور</span>شریف</td>
-                <td><span>امتیاز</span>۱۰۰</td>
-              </tr>
-              <tr>
-                <td><span>رتبه</span>۲۰</td>
-                <td><span>نام تیم</span>ممد</td>
-                <td><span>نام دانشگاه و کشور</span>شریف</td>
-                <td><span>امتیاز</span>۱۰۰</td>
-              </tr>
-              <tr>
-                <td><span>رتبه</span>۲۰</td>
-                <td><span>نام تیم</span>ممد</td>
-                <td><span>نام دانشگاه و کشور</span>شریف</td>
-                <td><span>امتیاز</span>۱۰۰</td>
-              </tr>
-              <tr>
-                <td><span>رتبه</span>۲۰</td>
-                <td><span>نام تیم</span>ممد</td>
-                <td><span>نام دانشگاه و کشور</span>شریف</td>
-                <td><span>امتیاز</span>۱۰۰</td>
-              </tr>
-              <tr>
-                <td><span>رتبه</span>۲۰</td>
-                <td><span>نام تیم</span>ممد</td>
-                <td><span>نام دانشگاه و کشور</span>شریف</td>
-                <td><span>امتیاز</span>۱۰۰</td>
-              </tr>
+                    <tr>
+                        <td><span class="span-title"><strong>رتبه</strong></span>۲۰</td>
+                        <td><span class="span-title"><strong>نام تیم</strong></span>ممد</td>
+                        <td><span class="span-title"><strong>نام دانشگاه و کشور</strong></span>شریف</td>
+                        <td><span class="span-title"><strong>امتیاز</strong></span>۱۰۰</td>
+                    </tr>
+                    <tr>
+                        <td><span class="span-title"><strong>رتبه</strong></span>۲۰</td>
+                        <td><span class="span-title"><strong>نام تیم</strong></span>ممد</td>
+                        <td><span class="span-title"><strong>نام دانشگاه و کشور</strong></span>شریف</td>
+                        <td><span class="span-title"><strong>امتیاز</strong></span>۱۰۰</td>
+                    </tr>
+                    <tr>
+                        <td><span class="span-title"><strong>رتبه</strong></span>۲۰</td>
+                        <td><span class="span-title"><strong>نام تیم</strong></span>ممد</td>
+                        <td><span class="span-title"><strong>نام دانشگاه و کشور</strong></span>شریف</td>
+                        <td><span class="span-title"><strong>امتیاز</strong></span>۱۰۰</td>
+                    </tr>
+                    <tr>
+                        <td><span class="span-title"><strong>رتبه</strong></span>۲۰</td>
+                        <td><span class="span-title"><strong>نام تیم</strong></span>ممد</td>
+                        <td><span class="span-title"><strong>نام دانشگاه و کشور</strong></span>شریف</td>
+                        <td><span class="span-title"><strong>امتیاز</strong></span>۱۰۰</td>
+                    </tr>
+                    <tr>
+                        <td><span class="span-title"><strong>رتبه</strong></span>۲۰</td>
+                        <td><span class="span-title"><strong>نام تیم</strong></span>ممد</td>
+                        <td><span class="span-title"><strong>نام دانشگاه و کشور</strong></span>شریف</td>
+                        <td><span class="span-title"><strong>امتیاز</strong></span>۱۰۰</td>
+                    </tr>
+                    <tr>
+                        <td><span class="span-title"><strong>رتبه</strong></span>۲۰</td>
+                        <td><span class="span-title"><strong>نام تیم</strong></span>ممد</td>
+                        <td><span class="span-title"><strong>نام دانشگاه و کشور</strong></span>شریف</td>
+                        <td><span class="span-title"><strong>امتیاز</strong></span>۱۰۰</td>
+                    </tr>
+                    <tr>
+                        <td><span class="span-title"><strong>رتبه</strong></span>۲۰</td>
+                        <td><span class="span-title"><strong>نام تیم</strong></span>ممد</td>
+                        <td><span class="span-title"><strong>نام دانشگاه و کشور</strong></span>شریف</td>
+                        <td><span class="span-title"><strong>امتیاز</strong></span>۱۰۰</td>
+                    </tr>
 
-             
-            </table>
 
-            <div class="bottom-table-button-container">
-                <button>قبلی</button>
-                <button>بعدی</button>
+                </table>
+
+                <div class="bottom-table-button-container">
+                    <button>قبلی</button>
+                    <button>بعدی</button>
+                </div>
+
             </div>
-
-          </div>
 
         </main>
     </div>
 </body>
 <script src="scripts.js"></script>
+
 </html>
