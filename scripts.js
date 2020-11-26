@@ -1,5 +1,17 @@
 let night_mode = 'day';
+console.log("salam");
 let sidebar_status = 'close';
+
+const urlParams = new URLSearchParams(window.location.search);
+night_mode = urlParams.get('theme');
+if (night_mode == undefined) night_mode = "day";
+if (night_mode == "night") {
+    night_mode="day";
+    // change_light_mode();
+    let swtch = document.getElementById("night-mode-switch");
+    swtch.onclick();
+    swtch.checked = true;
+}
 
 window.transitionToPage = function (href) {
     document.querySelector('body').style.opacity = 0

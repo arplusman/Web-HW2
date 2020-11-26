@@ -1,5 +1,28 @@
 const urlParams = new URLSearchParams(window.location.search);
 const requestedTab = urlParams.get('tab');
+let night_mode = urlParams.get('theme');
+
+if (night_mode == "night") {
+    night_mode = "day";
+    change_theme();
+}
+
+function change_theme() {
+    let elements = Array.from(document.querySelectorAll(".minimal-navbar, .signin-body, #main-form, #sign-form, .signin-form, .form-container"));
+    night_mode = (night_mode == "night" ? "day" : "night");
+
+    if (night_mode == "night") {
+        elements.forEach (element => {
+            element.classList.add("night-mode");
+        });    
+        document.getElementById("pointless-picture").getElementsByClassName("source").srcset = "files/signup-highQ-dark.jpg"
+        document.getElementById("pointless-picture").getElementsByClassName("img").src = "files/signup-highQ-dark.jpg"
+    } else {
+        elements.forEach (element => {
+            element.classList.remove("night-mode");
+        });
+    }
+}
 
 isFormValid = true;
 let validationErrorMessage = "";
@@ -89,3 +112,7 @@ function validateSigninForm() {
         return false;
     }
 }
+
+Array.from(document.getElementsByClassName("homeLink")).forEach(e => {
+    e.href = `index.html?theme=${night_mode}`;
+})

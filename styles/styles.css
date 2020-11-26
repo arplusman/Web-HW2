@@ -28,6 +28,11 @@ html {
   overflow-y: scroll;
   flex-wrap: wrap;
 }
+#body #main::-webkit-scrollbar {
+  display: none;
+  width: 0px;
+  background: transparent;
+}
 #body #main.night-mode {
   background-color: #616161 !important;
 }
@@ -531,6 +536,9 @@ input:checked + .slider:before {
   background-color: #adc1ff;
   transition: background-color 0.5s, color 0.7s, display 0.5s;
 }
+.signin-body.night-mode {
+  background-color: #174e70;
+}
 .signin-body main {
   display: flex;
   height: 85vh;
@@ -551,6 +559,9 @@ input:checked + .slider:before {
   display: flex;
   flex-direction: row;
   direction: rtl;
+}
+.signin-body #main-form.night-mode {
+  background-color: #0c375a;
 }
 .signin-body #main-form #sign-form-picture {
   height: 100%;
@@ -588,7 +599,7 @@ input:checked + .slider:before {
 }
 .signin-body #main-form #sign-form .form-button-container .form-head-button {
   background-color: #0c375a;
-  color: white;
+  color: #4e92ce;
   font-size: 20px;
   width: 50%;
   height: 100%;
@@ -601,7 +612,15 @@ input:checked + .slider:before {
 }
 .signin-body #main-form #sign-form .form-button-container .form-head-button.selected-form-button {
   background-color: transparent;
+  color: white;
+}
+.signin-body #main-form #sign-form.night-mode .form-button-container .form-head-button {
+  background-color: #4e92ce;
   color: #0c375a;
+}
+.signin-body #main-form #sign-form.night-mode .form-button-container .form-head-button.selected-form-button {
+  background-color: transparent;
+  color: white;
 }
 .signin-body #main-form #sign-form .form-container {
   height: 90%;
@@ -657,12 +676,14 @@ input:checked + .slider:before {
   font-size: 15px;
   border: none;
 }
+.signin-body #main-form #sign-form .form-container .signin-form.night-mode input[type=button], .signin-body #main-form #sign-form .form-container .signin-form.night-mode input[type=submit] {
+  background-color: #4e92ce;
+}
 .signin-body #main-form #sign-form .form-container .signin-form > .checkbox-container {
   display: flex;
   align-items: center;
 }
 .signin-body #main-form #sign-form .form-container .signin-form > .checkbox-container > input {
-  background-color: magenta;
   margin-left: 10px;
 }
 .signin-body #main-form #sign-form .form-container .signin-form > .checkbox-container > label {

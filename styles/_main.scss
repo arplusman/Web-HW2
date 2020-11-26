@@ -26,6 +26,11 @@ html {
             align-self: stretch;
             display: flex;
             overflow-y: scroll;
+            &::-webkit-scrollbar {
+                display: none;
+                width: 0px;
+                background: transparent;
+            }
             flex-wrap: wrap;
         
             &.night-mode {
@@ -55,6 +60,7 @@ html {
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
+        
         // flex: 1 0 21%;
 
         @media screen and (max-width: 1000px) {

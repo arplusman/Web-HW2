@@ -17,6 +17,10 @@
     background-color: rgb(173, 193, 255);
     transition: background-color 0.5s, color 0.7s, display 0.5s;
 
+    &.night-mode {
+        background-color: rgb(23, 78, 112);
+    }
+
     main {
         display: flex;
         height: 85vh;
@@ -38,6 +42,10 @@
         display: flex;
         flex-direction: row;
         direction: rtl;
+
+        &.night-mode {
+            background-color: rgb(12, 55, 90);
+        }
 
 
         #sign-form-picture {
@@ -75,7 +83,8 @@
                 min-width: 500px;
                 .form-head-button {
                     background-color: rgb(12, 55, 90);
-                    color: white;
+                    color: rgb(78, 146, 206);
+                    
                     font-size: 20px;
                     width: 50%;
                     height: 100%;
@@ -88,7 +97,18 @@
 
                     &.selected-form-button {
                         background-color: transparent;
-                        color: rgb(12, 55, 90);
+                        color: white;
+                    }
+                }
+            }
+
+            &.night-mode .form-button-container {
+                .form-head-button {
+                    background-color: rgb(78, 146, 206);
+                    color: rgb(12, 55, 90);
+                    &.selected-form-button {
+                        background-color: transparent;
+                        color: white;
                     }
                 }
             }
@@ -154,6 +174,11 @@
                         color: white;
                         font-size: 15px;
                         border: none;
+
+                    }
+
+                    &.night-mode input[type=button], &.night-mode input[type=submit]{
+                        background-color: rgb(78, 146, 206);
                     }
 
                     &>.checkbox-container {
@@ -161,10 +186,7 @@
                         align-items: center;
                         
                         &>input {
-                            // padding: 10px;
-                            background-color: magenta;
                             margin-left: 10px;
-                            // colro: red;
                         }
 
                         &>label {

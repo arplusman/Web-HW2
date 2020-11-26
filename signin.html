@@ -17,13 +17,13 @@
 
     <nav class="navbar minimal-navbar">
         <div id="logo-container">
-            <a class="navbar-brand" href="index.html">
+        <a class="navbar-brand homeLink" href="index.html"">
                 <img src="./files/blue_favicon/android-chrome-512x512.png" alt="" loading="lazy">
                 <p id="logo-text">Fail Pardazan</p>
             </a>
 
         </div>
-        <a href="index.html" class="go-back-link">بازگشت به خانه ></a>
+        <a href="index.html" class="go-back-link homeLink"">بازگشت به خانه ></a>
     </nav>
 
 
@@ -62,7 +62,7 @@
                     </div>
 
                     <div class="signup-form-container" id="signup-form">
-                        <form action="#" class="signin-form" id="signupForm" method="POST" onsubmit="return validateSignupForm()">
+                        <form action="#" class="signin-form" id="signupForm" method="GET" onsubmit="return validateSignupForm()">
                             <h1>ثبت نام</h1>
                             <input type="email" name="email" id="email" class="signin-form-text-input" placeholder="ایمیل"
                                 required>
@@ -90,9 +90,9 @@
             </div>
 
             <div id="sign-form-picture">
-                <picture>
+                <picture id="pointless-picture">
                     <source media="(min-width:1000px)" srcset="files/signup-highQ-light.jpg">
-                    <img src="files/signup-lowQ-dark.jpg" alt="OoOoF">
+                    <img src="files/signup-lowQ-light.jpg" alt="OoOoF">
                 </picture>
             </div>
 
@@ -100,7 +100,6 @@
 
     </main>
     </div>
-    <script src="scripts.js"></script>
     <script src="signinScripts.js"></script>
 </body>
 
