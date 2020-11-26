@@ -237,18 +237,34 @@ html {
     height: auto;
 }
 
+
 table {
 
-    tr {
+    border-collapse: separate;
+    border: 5px solid rgb(173, 193, 255);
+    border-radius: 5px;
+    padding: 1px;
+
+    @media screen and (max-width: 600px) {
+        border: none;
+    }
+
+
+    tr:not(:first-child) {
         @media screen and (max-width: 600px) {
             display: block;
-            margin: 10px auto;
+            margin: 10px auto 50px;
+            border-radius: 5px;
+            border: 1px solid rgba(21, 87, 124, 0.993);
+            padding: 10px;
         }
     }
     th {
-        font-size: 3rem;
-        background-color: rgba(0, 119, 255, 0.836);
-        border: 1px solid white;
+        font-size: 2.2rem;
+        background-color: rgba(35, 109, 143, 0.993);
+        color: white;
+        border-color: white;
+        padding: 16px 12px;
 
         @media screen and (max-width:600px) {
             display: none;
@@ -256,8 +272,8 @@ table {
     }
 
     td {
-        font-size: 2rem;
-        border: 1px solid rgb(80, 180, 238); 
+        font-size: 1.7rem;
+        padding: 12px 12px;
 
         span {
             display: none;
@@ -276,14 +292,40 @@ table {
     }
 
     tr:nth-of-type(even) {
-        background-color: rgba(213, 243, 247, 0.966);
+        background-color: rgba(240, 253, 255, 0.966);
+       
+        @media screen and (max-width: 600px) {
+            background-color: rgba(97, 197, 243, 0.775)
+        }
     }
 
     tr:nth-of-type(odd) {
-        background-color: rgb(111, 176, 187);
+        background-color: rgba(97, 197, 243, 0.775)
     }
 
 
     text-align: center;
     width: 100%;
+}
+
+.bottom-table-button-container {
+    font-family: Sahel ;
+    font-weight: 300;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: cneter;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 20px;
+    
+    &>button {
+        border: 5px solid rgb(173, 193, 255);
+        border-radius: 5px;
+        padding: 10px;
+        background-color: transparent;
+        color: rgba(35, 109, 143, 0.993);
+        display: inline;
+        width: 30%;
+        min-width: 100px;
+    }
 }
