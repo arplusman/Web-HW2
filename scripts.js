@@ -4,7 +4,7 @@ let sidebar_status = 'close';
 
 const urlParams = new URLSearchParams(window.location.search);
 night_mode = urlParams.get('theme');
-if (night_mode == undefined) night_mode = "day";
+if (night_mode == undefined || night_mode == "null") night_mode = "day";
 if (night_mode == "night") {
     night_mode="day";
     // change_light_mode();

@@ -531,10 +531,19 @@ input:checked + .slider:before {
   color: #0b4a81;
 }
 
+.homeLink:hover {
+  cursor: pointer;
+}
+
+body * {
+  transition: background-color 0.5s;
+}
+
 .signin-body {
   font-family: Sahel;
   background-color: #adc1ff;
   transition: background-color 0.5s, color 0.7s, display 0.5s;
+  transition: opacity 0.5s;
 }
 .signin-body.night-mode {
   background-color: #174e70;

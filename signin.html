@@ -9,21 +9,27 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles/styles.css">
-    <title>Account</title>
+    <title>حساب کاربری</title>
+
+    <link rel="icon" href="./files/black_favicon/favicon.ico">
+    <link rel="icon" sizes="16x16" href="./files/black_favicon/favicon-16x16.png">
+    <link rel="icon" sizes="32x32" href="./files/black_favicon/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="./files/black_favicon/apple-touch-icon.png">
+    <link rel="icon" sizes="192x192" href="./files/black_favicon/android-chrome-192x192.png">
+    <link rel="icon" sizes="512x512" href="./files/black_favicon/android-chrome-512x512.png">
 
 </head>
 
 <body class="signin-body">
 
     <nav class="navbar minimal-navbar">
-        <div id="logo-container">
-        <a class="navbar-brand homeLink" href="index.html"">
-                <img src="./files/blue_favicon/android-chrome-512x512.png" alt="" loading="lazy">
-                <p id="logo-text">Fail Pardazan</p>
-            </a>
-
-        </div>
-        <a href="index.html" class="go-back-link homeLink"">بازگشت به خانه ></a>
+        <a id="logo-container">
+            <div class="navbar-brand homeLink"  onclick="goHome()">
+                    <img src="./files/blue_favicon/android-chrome-512x512.png" alt="" loading="lazy">
+                    <p id="logo-text">Fail Pardazan</p>
+            </div>
+        </a>
+        <a onclick="goHome()" class="go-back-link homeLink"">بازگشت به خانه ></a>
     </nav>
 
 
@@ -90,9 +96,9 @@
             </div>
 
             <div id="sign-form-picture">
-                <picture id="pointless-picture">
-                    <source media="(min-width:1000px)" srcset="files/signup-highQ-light.jpg">
-                    <img src="files/signup-lowQ-light.jpg" alt="OoOoF">
+                <picture>
+                    <source id="pointless-picture" media="(min-width:1000px)" srcset="files/signup-highQ-light.jpg">
+                    <img id="pointless-image" src="files/signup-lowQ-light.jpg" alt="OoOoF">
                 </picture>
             </div>
 

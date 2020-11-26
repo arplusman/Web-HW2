@@ -5,6 +5,8 @@ let night_mode = urlParams.get('theme');
 if (night_mode == "night") {
     night_mode = "day";
     change_theme();
+} else {
+    night_mode = "day";
 }
 
 function change_theme() {
@@ -15,11 +17,13 @@ function change_theme() {
         elements.forEach (element => {
             element.classList.add("night-mode");
         });    
-        document.getElementById("pointless-picture").getElementsByClassName("source").srcset = "files/signup-highQ-dark.jpg"
-        document.getElementById("pointless-picture").getElementsByClassName("img").src = "files/signup-highQ-dark.jpg"
+        document.getElementById("pointless-picture").srcset = "files/signup-highQ-dark.jpg"
+        document.getElementById("pointless-image").src = "files/signup-highQ-dark.jpg"
     } else {
         elements.forEach (element => {
             element.classList.remove("night-mode");
+            document.getElementById("pointless-picture").srcset = "files/signup-highQ-light.jpg"
+            document.getElementById("pointless-image").src = "files/signup-highQ-light.jpg"      
         });
     }
 }
@@ -113,6 +117,13 @@ function validateSigninForm() {
     }
 }
 
-Array.from(document.getElementsByClassName("homeLink")).forEach(e => {
-    e.href = `index.html?theme=${night_mode}`;
-})
+function goHome() {
+    transitionToPage(`index.html?theme=${night_mode}`);
+}
+
+window.transitionToPage = function (href) {
+    document.querySelector('body').style.opacity = 0
+    setTimeout(function () {
+        window.location.href = href
+    }, 500)
+}

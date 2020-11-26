@@ -12,10 +12,21 @@
     color: rgb(11, 74, 129);
 }
 
+.homeLink:hover {
+    cursor: pointer;
+}
+
+body {
+    & * {
+        transition: background-color 0.5s;
+    }
+}
+
 .signin-body {
     font-family: Sahel;
     background-color: rgb(173, 193, 255);
     transition: background-color 0.5s, color 0.7s, display 0.5s;
+    transition: opacity .5s;
 
     &.night-mode {
         background-color: rgb(23, 78, 112);
