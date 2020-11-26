@@ -99,7 +99,7 @@
         position: fixed;
         right: 0;
         width: 100%;
-        background-color: #17a2b8;
+        background-color: rgba(97, 197, 243, 0.993);
         bottom: 0;
         place-content: space-between;
         z-index: 5;
@@ -132,10 +132,6 @@
 
     &>button.active {
         border-bottom: 3px solid;
-    }
-
-    &>button:hover {
-        // tr: scale(1.2);
     }
 
     #home-button {

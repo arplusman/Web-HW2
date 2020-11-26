@@ -47,9 +47,9 @@ body {
         max-width: 1000px;
         min-width: 500px;
         width: 80%;
-        height: 50vh;
-        margin-right: 50px;
-        margin-left: 50px;
+        height: 75%;
+        margin-right: 50px !important;
+        margin-left: 50px !important;
         display: flex;
         flex-direction: row;
         direction: rtl;
@@ -91,7 +91,7 @@ body {
             .form-button-container {
                 width: 100%;
                 height: 10%;
-                min-width: 500px;
+                min-width: 400px;
                 .form-head-button {
                     background-color: rgb(12, 55, 90);
                     color: rgb(78, 146, 206);

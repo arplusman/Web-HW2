@@ -323,7 +323,7 @@ table tr:nth-of-type(odd) {
     position: fixed;
     right: 0;
     width: 100%;
-    background-color: #17a2b8;
+    background-color: rgba(97, 197, 243, 0.993);
     bottom: 0;
     place-content: space-between;
     z-index: 5;
@@ -562,9 +562,9 @@ body * {
   max-width: 1000px;
   min-width: 500px;
   width: 80%;
-  height: 50vh;
-  margin-right: 50px;
-  margin-left: 50px;
+  height: 75%;
+  margin-right: 50px !important;
+  margin-left: 50px !important;
   display: flex;
   flex-direction: row;
   direction: rtl;
@@ -604,7 +604,7 @@ body * {
 .signin-body #main-form #sign-form .form-button-container {
   width: 100%;
   height: 10%;
-  min-width: 500px;
+  min-width: 400px;
 }
 .signin-body #main-form #sign-form .form-button-container .form-head-button {
   background-color: #0c375a;
