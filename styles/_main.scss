@@ -67,6 +67,10 @@ html {
             width: 30%;
         }
 
+        @media screen and (max-width: 800px) {
+            width: 45%;
+        }
+
         @media screen and (max-width: 600px) {
             width: 96%;
         }
@@ -114,15 +118,15 @@ html {
             background-color: #D1634E;
             border-radius: 20px;
 
-            @media screen and (max-width: 600px) {
-                width: 90%;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                background-color: yellowgreen;
-                height: 20%;
-                border-radius: 20px;
-            }
+            // @media screen and (max-width: 600px) {
+            //     width: 90%;
+            //     display: flex;
+            //     justify-content: space-between;
+            //     align-items: center;
+            //     background-color: yellowgreen;
+            //     height: 20%;
+            //     border-radius: 20px;
+            // }
 
             .rank {
                 padding-right: 10px;
@@ -153,15 +157,15 @@ html {
             margin: 0 5px;
             padding: 0;
 
-            @media screen and (max-width: 600px) {
-                width: 90%;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                background-color: yellowgreen;
-                height: 20%;
-                border-radius: 20px;
-            }
+            // @media screen and (max-width: 600px) {
+            //     width: 90%;
+            //     display: flex;
+            //     justify-content: space-between;
+            //     align-items: center;
+            //     background-color: yellowgreen;
+            //     height: 20%;
+            //     border-radius: 20px;
+            // }
 
             .key {
                 display: none;
@@ -184,12 +188,12 @@ html {
                 text-align: center;
                 border-radius: 15px;
 
-                @media screen and (max-width: 600px) {
-                    background-color: inherit;
-                    width: 10%;
-                    font-size: 2.1rem;
-                    color: inherit;
-                }
+                // @media screen and (max-width: 600px) {
+                //     background-color: inherit;
+                //     width: 10%;
+                //     font-size: 2.1rem;
+                //     color: inherit;
+                // }
             }
         }
 
@@ -234,15 +238,41 @@ html {
 }
 
 table {
+
+    tr {
+        @media screen and (max-width: 600px) {
+            display: block;
+            margin: 10px auto;
+        }
+    }
     th {
         font-size: 3rem;
         background-color: rgba(0, 119, 255, 0.836);
         border: 1px solid white;
+
+        @media screen and (max-width:600px) {
+            display: none;
+        }
     }
 
     td {
         font-size: 2rem;
         border: 1px solid rgb(80, 180, 238); 
+
+        span {
+            display: none;
+        }
+
+        @media screen and (max-width: 600px) {
+            span {
+                display: block;
+            }
+            justify-content: space-between;
+            display: flex;
+            width: 100%;
+            border: none;
+        }
+
     }
 
     tr:nth-of-type(even) {
